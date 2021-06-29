@@ -4,7 +4,7 @@
     $password = "masterkey";
     
     // CHANGE THIS "//localhost/xe" BASED ON YOUR DATABASE SID
-    $connection = oci_connect($username, $password, "//localhost/orcl");
+    $connection = oci_connect($username, $password, "//localhost/xe");
 
     // IF THE CONNECTION HAS ERROR
     if (!$connection) {
