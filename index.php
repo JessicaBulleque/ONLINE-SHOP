@@ -236,7 +236,7 @@
 
     <div class="promotion-container">
       <div class="promotion-item">
-        <img src="./shirts/top-model.png" alt="">
+        <img src="./models/top-model.png" alt="">
         <div class="overlay">
           <div class="text">
           <h2>T-SHIRT</h2>
@@ -246,7 +246,7 @@
       </div>
 
       <div class="promotion-item">
-        <img src="./shirts/beans.png" alt="">
+        <img src="./models/beans.png" alt="">
         <div class="overlay">
           <div class="text">
           <h2>BEANIES</h2>
