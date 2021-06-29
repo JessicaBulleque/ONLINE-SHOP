@@ -4,7 +4,7 @@
     $password = "masterkey";
     
     // CHANGE THIS "//localhost/xe" BASED ON YOUR DATABASE SID
-    $connection = oci_connect($username, $password, "//localhost/xe");
+    $connection = oci_connect($username, $password, "//localhost/orcl");
 
     // IF THE CONNECTION HAS ERROR
     if (!$connection) {
@@ -40,7 +40,7 @@
 </head>
 <body>
 
-    <div class="header">
+    <header>
         <div class="logo">
             <a href="index.php"><img src="./logo/logo.png" alt=""></a>
         </div>
@@ -104,7 +104,7 @@
                </ul>
              </div>
         </div>
-    </div>
+    </header>
 
 
 
@@ -123,28 +123,53 @@
 
 
         <div class="slide first">
-          <img src="./models/viyLine-banner.jpg" alt="">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+            <img src="./models/team-payaman.png" alt="">
         </div>
-        <div class="slide">
-          <img src="./models/viyLine-banner.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="./models/viyLine-banner.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="./models/viyLine-banner.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="./models/viyLine-banner.jpg" alt="">
-        </div>
-       
 
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
+        <div class="slide second">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+            <img src="./models/viyLine.jpg" alt="">
         </div>
+        
+        <div class="slide third">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+
+            <img src="./models/viyLine.jpg" alt="">
+        </div>
+
+        <div class="slide fourth">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+
+            <img src="./models/viyLine.jpg" alt="">
+        </div>
+        
+
+
+
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
       </div>
 
 

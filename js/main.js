@@ -1,3 +1,10 @@
+window.addEventListener('scroll', function() {
+  let header = document.querySelector('header');
+
+  header.classList.toggle('scrolling', window.scrollY > 0);
+})
+
+
 const shopHover = document.querySelector('.shop-hover');
 function shopIsHover() {
         if (shopHover.style.display==='none'){
