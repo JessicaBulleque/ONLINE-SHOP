@@ -116,7 +116,7 @@ header .shop-hover .hover-image img{
 
 
 .scrolling{
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .4);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .3);
 }
 
 
@@ -141,7 +141,7 @@ header .shop-hover .hover-image img{
     position: relative;
     width: 100%;
     height: 70vh;
-    overflow: none;
+    overflow: hidden;
     
   }
   
@@ -177,7 +177,7 @@ header .shop-hover .hover-image img{
   .slide .text-info button{
     background: none;
     padding: 4px 12px;
-    border: 1px solid brown;
+    border: 2px solid brown;
     font-size: 18px;
     color: brown;
     border-radius: 30px;
@@ -194,6 +194,12 @@ header .shop-hover .hover-image img{
   .first{
     background: #eeedf3;
   }
+
+
+  .second{
+    background: #cea177;
+  }
+
   .first img, .third img{
       right: 0%;
   }
@@ -597,31 +603,27 @@ header .shop-hover .hover-image img{
 
 .products-promotion{
   position: relative;
-  height: 80vh;
+  height: 90vh;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgb(255, 248, 248);
 }
 
-.section {
-  padding: 60px 15px;
-}
-
-.section .title {
+ .title {
   text-align: center;
+  font-size: 18px;
+}
+.title h2{
+  font-size: 38px;
 }
 
-.section .title h2 {
-  font-size: 50px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
 
 .promotion-container{
-  position: absolute;
-  height: 360px;
-  width: 1200px;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 5%;
+  height: 300px;
+  width: 100%;
   display: flex;
+  
 }
 
 .promotion-item{
@@ -633,16 +635,7 @@ header .shop-hover .hover-image img{
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
   overflow: hidden;
   cursor: pointer;
-}
-
-.promotion-item:hover img{
-  width: 120%;
-  height: 120%;
-}
-
-.promotion-item:hover .overlay{
-  opacity: 1;
-  transition: ease-in-out .7s;
+  border-radius: 10px;
 }
 
 .promotion-item img{
@@ -652,8 +645,18 @@ header .shop-hover .hover-image img{
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
+  transition: ease-in-out .5s;
+}
+.promotion-item:hover img{
+  width: 110%;
+  height: 110%;
+}
+
+.promotion-item:hover .overlay{
+  opacity: 1;
   transition: ease-in-out .7s;
 }
+
 
 .promotion-item .overlay{
   position: absolute;
@@ -673,6 +676,7 @@ header .shop-hover .hover-image img{
   color: black;
   width: max-content;
   background-color: white;
+  font-size: 18px;
   border-radius: 30px;
   margin-bottom: 5px;
 }
@@ -731,77 +735,126 @@ header .shop-hover .hover-image img{
 
 
 .new-product-container{
+  height: max-content;
   width: 100%;
-  height: 100vh;
-  display: inline;
+  padding: 2.5% 10% 0 10%;
 }
-
-
-.new-product-container .container{
-  width: 100%;
-}
-
 
 .new-product-container .title-container{
+  font-size: 18px;
   text-align: center;
-  margin-top: 5%;
+}
+.new-product-container .title-container h2{
+  font-size: 38px;
 }
 
-.new-product-container .products-container{
-  height: max-content;
-  padding: 10% ;
-  margin-top: -5%;
-  display: inline-flex;
-}
-
-.new-product-container .products-container ul{
+.new-product-container .product-container{
   width: 100%;
-  height: max-content;
-  padding: 0 5px;
+  height: 100%;
+  padding: 5% 0;
 }
-
-.new-product-container .products-container ul li{
+.product-container ul{
+  height: max-content;
+  background: rgb(240, 240, 240);
+  padding: 2% 2.5%;
+}
+.product-container ul li{
   display: inline-block;
-  margin:  20px 10px;
 }
 
-.products-container .new-product-box{
+.product-container .row{
+  display: flex;
+  justify-content: center;
+}
+
+.product-container .product-box{
   position: relative;
-  width: 290px;
-  height: 400px;
+  top: 0%;
+  width: 220px;
+  height: 280px;
   display: grid;
-  transition: ease-in-out .4s;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: ease-in-out .3s;
+  margin: 15px;
 }
 
-.products-container .new-product-box:hover{
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .4);
+.product-container .product-box .container{
+  background: whitesmoke;
 }
 
-
-.new-product-box .product-image{
-  height: 300px;
+.product-container .product-box .image-holder{
+  position: absolute;
   width: 100%;
+  height: 75%;
+  top: 0%;
+  border-bottom: 1px solid rgb(41, 41, 41);
+
 }
-.new-product-box .product-image img{
+
+.product-container .product-box .product-info-holder{
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0%;
+  padding: 5px;
+  text-align: center;
+}
+.product-container .product-box img{
   width: 100%;
   height: 100%;
 }
 
-.new-product-box .product-info{
-  text-align: center;
-}
-
-.product-image .icon-container {
+.product-box img.icon-wish{
   position: absolute;
-  right: 2.5%;
-  bottom: 100px;
+  top: 3%;
+  right: 5%;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
-.product-image .icon-container img{
-  width: 25px;
-  height: 25px;
+
+.product-box .icon-cart-holder{
+  position: absolute;
+  bottom: 28%;
+  right: 3%;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  background: white;
+  padding: 7px;
+  border-radius: 4px;
+  transition: ease-in-out .3s;
+  cursor: pointer;
 }
+
+.product-box .icon-cart-holder:hover{
+  border-radius: 50%;
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, .2);
+  filter: invert(1);
+}
+.product-box .icon-cart-holder img{
+  width: 100%;
+  height: 100%;
+}
+
+.product-box:hover{
+  box-shadow: 10px 10px 10px -5px  rgba(0, 0, 0, .4);
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

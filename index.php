@@ -4,7 +4,7 @@
     $password = "masterkey";
     
     // CHANGE THIS "//localhost/xe" BASED ON YOUR DATABASE SID
-    $connection = oci_connect($username, $password, "//localhost/xe");
+    $connection = oci_connect($username, $password, "//localhost/orcl");
 
     // IF THE CONNECTION HAS ERROR
     if (!$connection) {
@@ -14,7 +14,7 @@
     }
 
     // THIS IS A VARIABLE HANDLE FOR QUERY
-    $qry = "select * from products";
+    $qry = "select * from products order by PRODUCTID DESC";
 
     // OCI_PARSE FOR CONNECTION DB AND QUERY
     $result = oci_parse($connection, $qry);
@@ -40,7 +40,7 @@
 </head>
 <body>
 
-    <header>
+<header>
         <div class="logo">
             <a href="index.php"><img src="./logo/logo.png" alt=""></a>
         </div>
@@ -104,86 +104,10 @@
                </ul>
              </div>
         </div>
-    </header>
+</header>
 
 
-
-
-
-
-<!--IMAGE SLIDER-->
-<div class="slider">
-      <div class="slides">
-        
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-       
-
-
-        <div class="slide first">
-            <div class="text-info">
-              <h1> LOREM IPSUM </h1>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
-            </div>
-            <img src="./models/team-payaman.png" alt="">
-        </div>
-
-        <div class="slide second">
-            <div class="text-info">
-              <h1> LOREM IPSUM </h1>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
-            </div>
-            <img src="./models/viyLine.jpg" alt="">
-        </div>
-        
-        <div class="slide third">
-            <div class="text-info">
-              <h1> LOREM IPSUM </h1>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
-            </div>
-
-            <img src="./models/viyLine.jpg" alt="">
-        </div>
-
-        <div class="slide fourth">
-            <div class="text-info">
-              <h1> LOREM IPSUM </h1>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
-            </div>
-
-            <img src="./models/viyLine.jpg" alt="">
-        </div>
-        
-
-
-
-
-          <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-          </div>
-      </div>
-
-
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-</div>
-
-
-
-
+<!-- LOGIN MODAL -->
 <div class="modal-bg">
   <div class="sign-in-out-container">
     <div class="close" onclick="loginClose()">
@@ -250,12 +174,89 @@
 
 
 
+
+<!--IMAGE SLIDER-->
+<div class="slider">
+      <div class="slides">
+        
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+       
+
+
+        <div class="slide first">
+            <div class="text-info">
+              
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+            <img src="./models/team-payaman.png" alt="">
+        </div>
+
+        <div class="slide second">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+            <img src="./models/viyLine.jpg" alt="">
+        </div>
+        
+        <div class="slide third">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+
+            <img src="./models/viyLine.jpg" alt="">
+        </div>
+
+        <div class="slide fourth">
+            <div class="text-info">
+              <h1> LOREM IPSUM </h1>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
+              <button> Shop now </button>
+            </div>
+
+            <img src="./models/viyLine.jpg" alt="">
+        </div>
+        
+
+
+
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+      </div>
+
+
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+</div>
+
+
+
+
+
 <!--PROMOTIONS HERE-->
 <div class="products-promotion">
-    <section class="section promotion">
     <div class="title">
       <h2>Team Payaman Collections</h2>
-      <span>Select from the premium product and save plenty money</span>
+      <span>
+        Select from the premium product and save plenty money
+      </span>
     </div>
 
 
@@ -299,50 +300,35 @@
 
 <!--NEW PRODUCTS-->
 <div class="new-product-container">
-  <div class="container title-container">
-    <h1>NEW PRODUCTS</h1>
-    <h3>Select from the premium product brands and save plenty money</h3>
-  </div>
+    <div class="title-container">
+      <h2> New Products </h2>
+      <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, dolor?</p>
+    </div>
 
-  <div class="container products-container">
-    <ul>
-       
-    <?php 
-    // IT WILL FETCH THE DATA FROM YOUR DATABASE $RESULT
-    while($row = oci_fetch_array($result)) { 
-    ?>
+    <div class="product-container">
 
-      <li>
-        <a href="index.php?<?=$row['PRODUCTID']?>">
-        <div class="new-product-box">
+        <ul>
 
-            <div class="product-image">
-              <img src="./shirts/<?=$row['PICTURE']?>" alt="">
+          <?php while($rows = oci_fetch_assoc($result)){ ?>
+            <li>
+              <div class="product-box">
+                  <div class="container image-holder">
+                      <a href="index.php?id=<?=$rows['PRODUCTID']?>"> <img src="./shirts/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
+                  </div>
+                  <div class="container product-info-holder">
+                      <h3> &#8369; <?=$rows['PRODUCTPRICE']?>.00 </h3>
+                      <p> <?=$rows['PRODUCTNAME']?> </p>
+                  </div>
 
-              <div class="icon-container">
-                <img id="wish" src="./icons/heart.png" alt=""><br>
-                <img src="./icons/shopping-cart.png" alt="">
-              </div>
-
-            </div>
-
-
-
-          <div class="product-info">
-            <p><?=$row['PRODUCTNAME']?></p>
-            <h3><?=$row['PRODUCTPRICE']?></h3>
-          </div>
-
-
-        </div>
-      </li>
-      </a>
-    <?php } ?>
-      
-    </ul>
-   
-    
-</div>
+                  <img src="./icons/heart.png" alt="" class="icon-wish">
+                  <div class="icon-cart-holder">
+                    <img src="./icons/shopping-cart.png" alt="" id="icon-cart">
+                  </div>
+              </div> 
+            </li>
+          <?php } ?>
+        </ul>
+    </div>
 </div>
 
 
@@ -359,8 +345,7 @@
 
 
 
-
-<!--EXCLUSIVE SALES-->
+<!--EXCLUSIVE SALES
 <div class="exclusive-sales-container">
   <ul>
     <li class="sample">
@@ -392,7 +377,7 @@
     </li>
   </ul>
 </div>
-
+-->
 
 
 

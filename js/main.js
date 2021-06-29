@@ -52,36 +52,15 @@ function loginClose(){
 }
 
 
+const wishIcon = document.querySelector('.icon-wish');
 
+wishIcon.addEventListener('click', function(){
 
-
-
-const wishIcon = document.getElementById('wish');
-
-wishIcon.addEventListener('click',function(){
-
-  if (wishIcon.src === "http://localhost/S.E/FinalSystem/icons/heart.png"){
-    wishIcon.src = "./icons/heart1.png";
+  console.log(wishIcon.src);
+  if(wishIcon.src === "http://localhost/ONLINE-SHOP/icons/heart.png"){
+    wishIcon.src = "icons/heart1.png";
   }
   else{
-    wishIcon.src = "./icons/heart.png";
+    wishIcon.src = "icons/heart.png";
   }
-});
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-const bannerContainer = document.getElementById("banner-container");
-bannerContainer.addEventListener('click', function(event){
-  console.log(event);
-});
+})
