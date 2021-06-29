@@ -3,17 +3,22 @@
     $username = "SYSTEM";
     $password = "masterkey";
     
-
+    // CHANGE THIS "//localhost/xe" BASED ON YOUR DATABASE SID
     $connection = oci_connect($username, $password, "//localhost/xe");
 
+    // IF THE CONNECTION HAS ERROR
     if (!$connection) {
+      // IT WILL DISPLAY THE ERROR MESSAGE
     $e = oci_error();
     echo htmlentities($e["message"]);
     }
 
+    // THIS IS A VARIABLE HANDLE FOR QUERY
     $qry = "select * from products";
 
+    // OCI_PARSE FOR CONNECTION DB AND QUERY
     $result = oci_parse($connection, $qry);
+    // OCI_EXECUTE WILL EXECUTE THE $result OR YOUR QUERY
     oci_execute($result);
       
 ?>
@@ -276,8 +281,11 @@
 
   <div class="container products-container">
     <ul>
-
-    <?php while($row = oci_fetch_array($result)) { ?>
+       
+    <?php 
+    // IT WILL FETCH THE DATA FROM YOUR DATABASE $RESULT
+    while($row = oci_fetch_array($result)) { 
+    ?>
 
       <li>
         <a href="index.php?<?=$row['PRODUCTID']?>">
@@ -359,70 +367,6 @@
     </li>
   </ul>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
