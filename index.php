@@ -1,17 +1,5 @@
 <?php
-
-    $username = "SYSTEM";
-    $password = "masterkey";
-    
-    // CHANGE THIS "//localhost/xe" BASED ON YOUR DATABASE SID
-    $connection = oci_connect($username, $password, "//localhost/orcl");
-
-    // IF THE CONNECTION HAS ERROR
-    if (!$connection) {
-      // IT WILL DISPLAY THE ERROR MESSAGE
-    $e = oci_error();
-    echo htmlentities($e["message"]);
-    }
+    include "connection.php";
 
     // THIS IS A VARIABLE HANDLE FOR QUERY
     $qry = "select * from products order by PRODUCTID DESC";
@@ -313,7 +301,7 @@
             <li>
               <div class="product-box">
                   <div class="container image-holder">
-                      <a href="index.php?id=<?=$rows['PRODUCTID']?>"> <img src="./shirts/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
+                      <a href="./php/product-details.php?id=<?=$rows['PRODUCTID']?>"> <img src="./shirts/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
                   </div>
                   <div class="container product-info-holder">
                       <h3> &#8369; <?=$rows['PRODUCTPRICE']?>.00 </h3>
