@@ -2,8 +2,9 @@
 
     $username = "SYSTEM";
     $password = "masterkey";
+    
 
-    $connection = oci_connect($username, $password, "//localhost/orcl");
+    $connection = oci_connect($username, $password, "//localhost/xe");
 
     if (!$connection) {
     $e = oci_error();
