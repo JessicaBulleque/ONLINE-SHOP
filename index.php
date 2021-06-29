@@ -442,7 +442,7 @@
 <!--FOOTER-->
 <div class="footer">
       <div class="aboutUs">
-        <h1>AAAAAA</h1>
+        <h1>ABOUT US</h1>
         <ul>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Blog</a></li>
