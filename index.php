@@ -1,3 +1,23 @@
+<?php
+
+    $username = "SYSTEM";
+    $password = "masterkey";
+
+    $connection = oci_connect($username, $password, "//localhost/orcl");
+
+    if (!$connection) {
+    $e = oci_error();
+    echo htmlentities($e["message"]);
+    }
+
+    $qry = "select * from products";
+
+    $result = oci_parse($connection, $qry);
+    oci_execute($result);
+      
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +29,7 @@
     <link rel="stylesheet" href="./css/style.css">
     
     
-    <title> Team Payaman | Clothing Lines</title>
+    <title> Team Payaman | Clothing Lines </title>
 
 </head>
 <body>
@@ -131,21 +151,13 @@
 </div>
 
 
-    
-
-
-
-
-
-
-
 
 
 <div class="modal-bg">
   <div class="sign-in-out-container">
-  <div class="close" onclick="loginClose()">
-    <p> +</p>
-</div>
+    <div class="close" onclick="loginClose()">
+      <p> +</p>
+    </div>
     <div class="login-container">
         <h1>LOGIN</h1>
             <form action="index.php" method="POST">
@@ -254,28 +266,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--NEW PRODUCTS-->
 <div class="new-product-container">
   <div class="container title-container">
@@ -285,13 +275,15 @@
 
   <div class="container products-container">
     <ul>
+
+    <?php while($row = oci_fetch_array($result)) { ?>
+
       <li>
+        <a href="output.php?productName=<?=$row['PRODUCTNAME']?>">
         <div class="new-product-box">
 
-         
-         
             <div class="product-image">
-              <img src="./shirts/TP1.png" alt="">
+              <img src="./shirts/<?=$row['PICTURE']?>" alt="">
 
               <div class="icon-container">
                 <img id="wish" src="./icons/heart.png" alt=""><br>
@@ -303,14 +295,15 @@
 
 
           <div class="product-info">
-            <p>TITLE</p>
-            <h3>PRICE</h3>
+            <p><?=$row['PRODUCTNAME']?></p>
+            <h3><?=$row['PRODUCTPRICE']?></h3>
           </div>
 
 
         </div>
       </li>
-
+      </a>
+    <?php } ?>
       
     </ul>
    
