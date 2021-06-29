@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="./css/style.css">
     
     
-    <title> PANGET | Clothing Lines </title>
+    <title> TEAM PAYAMAN | CLOTHING LINES </title>
 
 </head>
 <body>
