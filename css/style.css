@@ -150,11 +150,12 @@
   
   .slide{
     width: 20%;
+    position: relative;
     transition: 2s;
   }
   
   .slide img{
-    width: 1600px;
+    width: 100%;
     height: 100%;
   }
   
