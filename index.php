@@ -280,7 +280,7 @@
     <?php while($row = oci_fetch_array($result)) { ?>
 
       <li>
-        <a href="output.php?productName=<?=$row['PRODUCTNAME']?>">
+        <a href="index.php?<?=$row['PRODUCTID']?>">
         <div class="new-product-box">
 
             <div class="product-image">
