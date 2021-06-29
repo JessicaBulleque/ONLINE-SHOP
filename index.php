@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     
     
-    <title> BAGO | Clothing Lines</title>
+    <title> Team Payaman | Clothing Lines</title>
 
 </head>
 <body>
