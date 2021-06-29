@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     
     
-    <title> I love you | Clothing Lines</title>
+    <title> Team Payaman | Clothing Lines</title>
 
 </head>
 <body>
