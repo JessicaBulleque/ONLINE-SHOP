@@ -123,6 +123,205 @@ header .shop-hover .hover-image img{
 
 
 
+/* MODAL LOGIN */
+.modal-bg{
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.712);
+  z-index: 100;
+  transition: all ease-in-out .7s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.modal-bg .login-container{
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background:rgb(255, 241, 214);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.modal-bg .login-container .close{
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  font-size: 30px;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  z-index: 1;
+  cursor: pointer;
+  transition: all ease-in-out .6s;
+}
+.modal-bg .login-container .close:hover{
+  transform: rotate(calc(90deg + 45deg));
+  background: cornsilk;
+  box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, .2);
+}
+
+
+.modal-bg .login-container .container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 7% 15%;
+  transition: left ease-in-out .5s;
+}
+
+.modal-bg .login-container .login-box{
+  left: 0%;
+}
+
+.modal-bg .login-container .login-box table{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+}
+.modal-bg .login-container .login-box table input, button{
+  margin: 7px 0;
+  width: 100%;
+  font-size: 16px;
+  padding: 7px 10px;
+  outline: none;
+  border: none;
+  
+}
+.modal-bg .login-container .login-box table #login-btn{
+  background:rgb(233, 106, 106);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-bg .login-container .login-box .fp{
+  margin-top: -10px;
+  margin-left: 3px;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+}
+
+.modal-bg .login-container .login-box .division{
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  color:rgba(128, 128, 128, 0.849);
+}
+.modal-bg .login-container .login-box .division hr{
+  border: 1px solid;
+  height: 1px;
+  width: 23%;
+  margin: 0 10px;
+}
+
+.modal-bg .login-container .login-box .other-acc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-bg .login-container .login-box .other-acc button{
+  width: 110px;
+  font-size: 14px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 20px;
+  margin: 7px;
+  cursor: pointer;
+}
+
+.modal-bg .login-container .login-box .other-acc button#fb-btn{
+  background: rgb(74, 122, 255);
+  border: 1px solid rgb(74, 122, 255);
+}
+
+.modal-bg .login-container .login-box .other-acc button#google-btn{
+  background: none;
+  border: 1px solid black;
+  color: black;
+}
+
+
+.modal-bg .login-container .login-box .other-acc button img{
+  width: 100%;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.modal-bg .login-container .login-box .reg-now{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal-bg .login-container .login-box .reg-now #reg-click{
+  color:rgb(233, 106, 106);
+  cursor: pointer;
+}
+
+.modal-bg .login-container .login-box .reg-now #reg-click:hover{
+  color:rgb(177, 80, 80);
+}
+
+
+
+.modal-bg .login-container .reg-box{
+  left: 100%;
+}
+
+
+
+.modal-bg .login-container .reg-box table{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 100%;
+}
+.modal-bg .login-container .reg-box table input, button{
+  margin: 5px 0;
+  width: 100%;
+  font-size: 14px;
+  padding: 7px 10px;
+  outline: none;
+  border: none;
+}
+
+.modal-bg .login-container .reg-box table #register-btn{
+  background:rgb(233, 106, 106);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-bg .login-container .reg-box .log-now{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal-bg .login-container .reg-box .log-now #log-click{
+  color:rgb(233, 106, 106);
+  cursor: pointer;
+}
+
+.modal-bg .login-container .reg-box .log-now #log-click:hover{
+  color:rgb(177, 80, 80);
+}
 
 
 
@@ -137,7 +336,9 @@ header .shop-hover .hover-image img{
 
 
 
-.slider{
+
+/* SLIDER BANNER */
+  .slider{
     position: relative;
     width: 100%;
     height: 70vh;
@@ -270,7 +471,7 @@ header .shop-hover .hover-image img{
 
 
 
-  /*css for automatic navigation*/
+/*css for automatic navigation*/
   
   .navigation-auto{
       position: absolute;
@@ -332,275 +533,7 @@ header .shop-hover .hover-image img{
 
 
 
-
-
-
-
-
-.modal-bg{
-  position: fixed;
-  top: 0%;
-  z-index: 101;
-  width: 100%;
-  height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, .7);
-}
-
-.modal-bg .close{
-  position: absolute;
-  top: 1.5%;
-  right: 3%;
-  width: max-content;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.modal-bg .close p{
-  color: red;
-  font-size: 22px;
-  transform: rotate(45deg);
-  
-}
-
-.modal-bg .sign-in-out-container{
-  position: relative;
-  width: 500px;
-  height: 600px;
-  background-color: white;
-  overflow: hidden;
-
-}
-
-.modal-bg .sign-in-out-container .login-container, .register-container{
-  position: absolute;
-  transition: left ease-in-out .7s;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-  background-color: bisque;
-}
-
-
-.modal-bg .sign-in-out-container .login-container{
-  text-align: center;
-  left: 0%;
-}
-
-
-
-
-.login-container form{
-  text-align: center;
-}
-
-
-.login-container h1{
-  margin: 30px 0px;
-  margin-top: 40px;
-}
-
-.login-container input{
-  padding: 10px;
-  margin-bottom: 7%;
-  outline: none;
-  border-radius: 5px;
-  border: 1px grey solid;
-  width: 320px;
-  font-size: 16px;
-}
-
-
-.login-container #login{
-  width: 320px;
-  height: 5vh;
-  border-radius: 5px;
-  font-size: 22px;
-  border-style: none;
-  background-color: green ;
-  color: white;
-  transition: background ease-in-out .4s;
-}
-
-
-.login-container #login:hover{
-  background: rgb(4, 105, 4);
-}
-
-
-
-
-.login-container #Fpw{
-  background: none;
-  border: none;
-  font-size: 10px;
-  color: black;
-  margin-top: -5%;
-  margin-bottom: 3%;
-  width: 315px;
-  text-align: left;
-}
-
-.login-container input[type="password"]{
-  margin-bottom: 0%;
-}
-
-
-
-
-
-
-.login-container p{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: gray;
-}
-
-
-
-
-.login-container h3{
-  text-align: center;
-  margin-top: 35%;
-}
-
-
-.login-container #reg{
-  height: 4vh;
-  font-size: 16px;
-  border-style: none;
-  background: none;
-  cursor: pointer;
-  color: #101820FF;
-}
-
-
-.login-container  .accounts{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 68%;
-  display: flex;
-}
-
-.login-container  .accounts button{
-  display: flex;
-  align-items: center;
-  padding: 5px 0px;
-  width: 100px;
-  height: 30px;
-  justify-content: center;
-  margin: 0px 15px;
-  border: none;
-  background-color: #1877f2;
-  cursor: pointer;
-  color: white;
-  
-
-}
-
-.login-container  .accounts button img{
-  height: 100%;
-  margin-right: 7px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.modal-bg .sign-in-out-container .register-container{
-  left: 100%;
-  text-align: center;
-}
-
-.register-container h1{
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-.register-container table{
-  width: 65%;
-  margin: 0 auto ;
-}
-
-
-
-.register-container table tr td input{
-  width: 100%;
-  font-size: 16px;
-  padding: 10px 7px;
-  outline: none;
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin: 5px 0px;
-}
-
-
-
-.register-container table tr td input[type="submit"]{
-  background-color: green;
-  font-size: 22px;
-  color: white;
-
-}
-
-.register-container table tr td input[type="submit"]:hover{
-  background-color: rgb(4, 105, 4);
-  transition: ease-in-out .3s;
-}
-
-
-
-
-.register-container #login{
-  height: 4vh;
-  font-size: 16px;
-  border-style: none;
-  background: none;
-  cursor: pointer;
-  color: #101820FF;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* PRODUCT PROMOTION CSS */
 .products-promotion{
   position: relative;
   height: 90vh;
@@ -774,7 +707,7 @@ header .shop-hover .hover-image img{
   height: 280px;
   display: grid;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: none;
   transition: ease-in-out .3s;
   margin: 15px;
 }
@@ -805,17 +738,21 @@ header .shop-hover .hover-image img{
   height: 100%;
 }
 
-.product-box img.icon-wish{
+.product-box #icon-wish{
   position: absolute;
-  top: 3%;
-  right: 5%;
-  z-index: 1;
-  width: 25px;
-  height: 25px;
+  top: 5% ;
+  right: 3%;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url("../icons/heart.png");
+  background-position: center;
+  background-size: cover;
   cursor: pointer;
 }
-
-
+.product-box #icon-wish:checked{
+  background-image: url("../icons/heart1.png");
+}
 .product-box .icon-cart-holder{
   position: absolute;
   bottom: 28%;
@@ -844,6 +781,7 @@ header .shop-hover .hover-image img{
   box-shadow: 10px 10px 10px -5px  rgba(0, 0, 0, .4);
   margin-top: 5px;
 }
+
 
 
 

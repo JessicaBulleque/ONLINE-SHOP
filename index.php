@@ -28,6 +28,7 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
         <div class="logo">
             <a href="index.php"><img src="./logo/logo.png" alt=""></a>
@@ -42,15 +43,15 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#" onclick="shopIsHover()" class="shop-icon" >Shop <img src="./icons/down-arrow.png" alt=""></a></li>
+                <li><a href="#" class="shop-icon" >Shop <img src="./icons/down-arrow.png" alt=""></a></li>
             </ul>
 
             <div class="cart">
-                <a href="#"><img src="./icons/shopping-bag.png" alt=""></a>
+                <a href="#"><img src="./icons/shopping-bag.png"></a>
             </div>
 
             <div class="account">
-            <a href="#"><img src="./icons/user.png" alt="" onclick="loginClick()"></a>
+            <a href="#"><img src="./icons/user.png" id="login-icon-click"></a>
             </div>
 
         </div>
@@ -97,67 +98,83 @@
 
 <!-- LOGIN MODAL -->
 <div class="modal-bg">
-  <div class="sign-in-out-container">
-    <div class="close" onclick="loginClose()">
-      <p> +</p>
-    </div>
     <div class="login-container">
-        <h1>LOGIN</h1>
-            <form action="index.php" method="POST">
-            <input type="text" placeholder="username or phone number"> <br>
-            <input type="password" placeholder="password">  <br>  
-            <button id="Fpw" type = "button">FORGOT PASSWORD?</button> <br>
-            <button type="submit" id="login"> LOGIN </button>
-            <p>or login using</p>
-            
-            <div class="accounts">
-                <button><img src="./icons/facebook (1).png" alt="">Facebook</button>
-                <button><img src="./icons/google.png" alt="">Google</button>
-            </div>
-            <h3>Don't have an account?</h3>  
-        </form>
-        <button id="reg" onclick="isClick()"> Register Now </button>
+        <div class="close">
+           +
+        </div>
+
+        <div class="container login-box">
+            <h1> Login here </h1>
+
+           <form action="" method="POST">
+              <table border="0">
+                <tr>
+                  <td> 
+                    <input type="text" name="email" placeholder="Email address"> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="password" name="pass"  placeholder="Password">
+                  </td>
+                </tr>
+                <tr>
+                  <td> <a href="#" class="fp"> Forgot password? </a> </td>
+                </tr>
+                <tr>
+                  <td><button type="submit" name="login-btn" id="login-btn"> Login </button></td>
+                </tr>
+              </table>
+              <div class="division">
+                  <hr> <p> Or login using </p> <hr>
+              </div>
+           </form>
+              <div class="other-acc">
+                  <button id="fb-btn">
+                      <img src="./icons/facebook (1).png" alt="">
+                      <p>Facebook</p>
+                  </button>
+                  <button id="google-btn">
+                      <img src="./icons/google.png" alt="">
+                      <p> Google </p>
+                  </button>
+              </div>
+
+              <div class="reg-now">
+                  <p> Don't have an account? <span id="reg-click"> Register now. </span></p>
+              </div>
+        </div>
+
+        <div class="container reg-box">
+            <h1> Register here </h1>
+            <form action="" method="POST">
+                <table>
+                  <tr>
+                    <td><input type="text" placeholder="Firstname"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" placeholder="Lastname"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" placeholder="Address"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="email" placeholder="Email address"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="password" placeholder="Password"></td>
+                  </tr>
+                  <tr>
+                    <td> <button type="submit" name="register-btn" id="register-btn"> Register </button></td>
+                  </tr>
+                </table>
+            </form>
+
+              <div class="log-now">
+                  <p> Already have an account? <span id="log-click"> Sign in now. </span></p>
+              </div>
+        </div>
     </div>
-
-    <div class="register-container">
-        <h1>REGISTER</h1>
-        <form action="index.php" method="POST">
-          <table border="0">
-            <tr>
-              <td> <input type="text" name="fname"  placeholder="FirstName"> </td>
-            </tr>
-
-            <tr>
-              <td> <input type="text" name="lname"  placeholder="LastName"></td>
-            </tr>
-
-            <tr>
-              <td><input type="text" name="address"  placeholder="Address"></td>
-            </tr>
-
-            <tr>
-              <td><input type="text" name="contact"  placeholder="Contact Number"></td>
-            </tr>
-
-            <tr>
-              <td> <input type="email" name="email"  placeholder="Email"> </td>
-            </tr>
-
-            <tr>
-              <td> <input type="password" name="pass"  placeholder="Password"></td>
-            </tr>
-
-            <tr>
-              <td><input type="submit" value="REGISTER"></td>
-            </tr>
-          </table>
-        </form>
-
-        <h3>Already have an account?</h3>  
-        <button id="login" onclick="isClick1()"> Login Now!</button>
-
-    </div>
-  </div>
 </div>
 
 
@@ -300,6 +317,7 @@
           <?php while($rows = oci_fetch_assoc($result)){ ?>
             <li>
               <div class="product-box">
+              
                   <div class="container image-holder">
                       <a href="./php/product-details.php?id=<?=$rows['PRODUCTID']?>"> <img src="./shirts/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
                   </div>
@@ -308,7 +326,7 @@
                       <p> <?=$rows['PRODUCTNAME']?> </p>
                   </div>
 
-                  <img src="./icons/heart.png" alt="" class="icon-wish">
+                  <input type="checkbox" name="wish" id="icon-wish">
                   <div class="icon-cart-holder">
                     <img src="./icons/shopping-cart.png" alt="" id="icon-cart">
                   </div>
@@ -427,5 +445,6 @@
 
     <!--SCRIPT-->
     <script src="./js/main.js"></script>
+    <script src="./js/clickable.js"></script>
 </body>
 </html>

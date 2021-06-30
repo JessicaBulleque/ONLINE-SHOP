@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="account">
-                <a href="#"><img src="../icons/user.png" alt="" onclick="loginClick()"></a>
+                    <a href="#"><img src="../icons/user.png" id="login-icon-click"></a>
                 </div>
 
             </div>
