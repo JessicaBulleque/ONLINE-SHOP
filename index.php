@@ -1,5 +1,10 @@
 <?php
+    error_reporting(0);
+    session_start();
     include "connection.php";
+
+    $userID = $_SESSION['userID'];
+
 
     // THIS IS A VARIABLE HANDLE FOR QUERY
     $qry = "select * from products order by PRODUCTID DESC";
@@ -8,6 +13,20 @@
     $result = oci_parse($connection, $qry);
     // OCI_EXECUTE WILL EXECUTE THE $result OR YOUR QUERY
     oci_execute($result);
+
+
+    $selectUser = oci_parse($connection, "SELECT * FROM CUSTOMERACC WHERE USERID = $userID");
+    oci_execute($selectUser);
+
+    $userSelectedRow = oci_fetch_assoc($selectUser);
+
+
+
+    if(isset($_GET['logout'])){
+      session_unset();
+      session_destroy();
+      header("location:index.php");
+    }
       
 ?>
 
@@ -19,13 +38,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-  <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css">
-    
-    
+  
     <title> TEAM PAYAMAN | CLOTHING LINES </title>
-
 </head>
+
+
+    <?php if(!empty($userID)) {?>
+      <style>
+        #login-icon-click{
+          display: none;
+        }
+        #user-profile{
+          display: flex;
+        }
+      </style>
+    <?php } else{ ?>
+      <style>
+        #login-icon-click{
+          display: flex;
+        }
+        #user-profile{
+          display: none;
+        }
+      </style>
+    <?php } ?>
+
+
+
 <body>
 
 <!-- HEADER -->
@@ -43,21 +84,52 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#" class="shop-icon" >Shop <img src="./icons/down-arrow.png" alt=""></a></li>
+                <li><a href="#" class="shop-icon" > Shop <img src="./icons/down-arrow.png" alt=""></a></li>
             </ul>
 
             <div class="cart">
-                <a href="#"><img src="./icons/shopping-bag.png"></a>
+                <a href="#"> <img src="./icons/shopping-bag.png"> </a>
             </div>
 
             <div class="account">
-            <a href="#"><img src="./icons/user.png" id="login-icon-click"></a>
+              <a href="#"> <img src="./icons/user.png" id="login-icon-click"> </a>
+              
+              <?php if(!empty($userSelectedRow['PROFILEPIC'])){ ?>
+              <a id="user-profile"> <img src="./user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
+              <?php } else{ ?>
+                <a id="user-profile"> <img src="./user-profile/default-profile.jpg" alt=""></a>
+              <?php } ?>
             </div>
-
         </div>
 
+        <div class="nav-account">
+            <form action="index.php" method="GET">
+              <ul>
+                <li> 
+                  <h4>
+                    <?=$userSelectedRow['FIRSTNAME']?> 
+                    <?=$userSelectedRow['LASTNAME']?>
+                  </h4>
+                </li>
 
-        <!--SHOP HOVER-->
+                <li>
+                  <a href="#"> My Account </a>
+                </li>
+
+                <li>
+                  <a href="#"> My Purchase </a>
+                </li>
+
+                <li>
+                  <button type="submit" name="logout"> Logout </button>   
+                </li>
+              </ul>
+            </form>
+        </div>
+               
+
+
+      <!--SHOP HOVER-->
         <div class="shop-hover">
              <div class="hover-image">
                <img src="./models/tp.jpg" alt="">
@@ -106,7 +178,7 @@
         <div class="container login-box">
             <h1> Login here </h1>
 
-           <form action="" method="POST">
+           <form action="./processes/login-process.php" method="POST">
               <table border="0">
                 <tr>
                   <td> 
@@ -193,10 +265,9 @@
 
         <div class="slide first">
             <div class="text-info">
-              
               <h1> LOREM IPSUM </h1>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
+              <a href="#"> Shop now </a>
             </div>
             <img src="./models/team-payaman.png" alt="">
         </div>
@@ -205,7 +276,7 @@
             <div class="text-info">
               <h1> LOREM IPSUM </h1>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
+              <a href="#"> Shop now </a>
             </div>
             <img src="./models/viyLine.jpg" alt="">
         </div>
@@ -214,7 +285,7 @@
             <div class="text-info">
               <h1> LOREM IPSUM </h1>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
+              <a href="#"> Shop now </a>
             </div>
 
             <img src="./models/viyLine.jpg" alt="">
@@ -224,7 +295,7 @@
             <div class="text-info">
               <h1> LOREM IPSUM </h1>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
-              <button> Shop now </button>
+              <a href="#"> Shop now </a>
             </div>
 
             <img src="./models/viyLine.jpg" alt="">

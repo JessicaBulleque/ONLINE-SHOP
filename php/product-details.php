@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="account">
-                    <a href="#"><img src="../icons/user.png" id="login-icon-click"></a>
+                    <a href="#"><img src="../icons/user.png" id="login-icon-clicked"></a>
                 </div>
 
             </div>

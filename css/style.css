@@ -71,8 +71,24 @@ header .nav-links div{
 header .nav-links div img{
     width: 100%;
     height: 100%;
-    
 }
+
+header .nav-links .account{
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header .nav-links .account img{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
 
 header .shop-hover{
     position: absolute;
@@ -81,37 +97,101 @@ header .shop-hover{
     top: 100%;
     background-color: rgb(243, 237, 237);
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
-    z-index: 10;
     display: none;
+    padding: 0 10%;
 }
 
 header .shop-hover div{
   width: 100%;
   margin-top: 2%;
+ 
+  padding: 10px 0;
+  line-height: 34px;
+  text-align: center;
+}
+
+header .shop-hover div:first-child{
+  text-align: left;
+}
+header .shop-hover div h1{
+  margin-top: 10px;
+  font-size: 24px;
 } 
 
 
-header .shop-hover div:first-child{
-  margin-left: 10%;
-}
-
 header .shop-hover div ul li{
   list-style: none;
-  line-height: 28px;
 }
 
 header .shop-hover div ul li a{
   text-decoration: none;
-  color: rgb(43, 40, 40);
+  color: rgb(71, 67, 67);
+  font-size: 15px;
 }
 
+
 header .shop-hover div ul li a:hover{
-  color: black;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
 }
 
 header .shop-hover .hover-image img{
-  width: 220px;
-  height: 250px;
+  width: 70%;
+  height: 90%;
+  margin-top: 10px;
+}
+
+
+header .nav-account{
+  position: absolute;
+  right: 10%;
+  top: 100%;
+  background: whitesmoke;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
+  width: 150px;
+  height: 150px;
+  padding: 7px;
+  display: none;
+
+}
+header .nav-account ul{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 28px;
+}
+header .nav-account ul li{
+  width: 100%;
+  list-style: none;
+  margin-left: 0%;
+  font-size: 15px;
+  text-align: right;
+  padding: 3px;
+}
+header .nav-account ul li button{
+  width: max-content;
+  height: max-content;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
+
+header .nav-account ul li a{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+header .nav-account ul li button:hover{
+  color:rosybrown;
+}
+header .nav-account ul li a:hover{
+  color:rosybrown;
 }
 
 
@@ -372,25 +452,32 @@ header .shop-hover .hover-image img{
     position: absolute;
     top: 50%;
     width: 400px;
+    height: max-content;
     z-index: 10;
+    line-height: 32px;
     color: rgb(79, 80, 92);
   }
-  .slide .text-info button{
-    background: none;
-    padding: 4px 12px;
-    border: 2px solid brown;
-    font-size: 18px;
+  .slide .text-info p{
+    margin-bottom: 15px;
+  }
+
+  .slide .text-info a{
     color: brown;
-    border-radius: 30px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: ease-in-out .2s;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid brown;
+    transition: ease-in-out .4s;
   }
-  .slide .text-info button:hover{
-    border-color: brown;
-    color: white;
+  .slide .text-info a:hover{
     background: brown;
+    color: white;
   }
+
+
+
+
 
   .first{
     background: #eeedf3;
