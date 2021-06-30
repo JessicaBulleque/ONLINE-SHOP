@@ -842,7 +842,7 @@ header .nav-account ul li a:hover{
   border-radius: 10px;
   overflow: none;
   transition: ease-in-out .3s;
-  margin: 15px;
+  margin: 0 8px;
 }
 
 .product-container .product-box .container{
@@ -878,13 +878,13 @@ header .nav-account ul li a:hover{
   appearance: none;
   width: 20px;
   height: 20px;
-  background-image: url("../icons/heart.png");
+  background-image: url("../image/icons/heart.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
 }
 .product-box #icon-wish:checked{
-  background-image: url("../icons/heart1.png");
+  background-image: url("../image/icons/heart1.png");
 }
 .product-box .icon-cart-holder{
   position: absolute;
@@ -912,7 +912,6 @@ header .nav-account ul li a:hover{
 
 .product-box:hover{
   box-shadow: 10px 10px 10px -5px  rgba(0, 0, 0, .4);
-  margin-top: 5px;
 }
 
 

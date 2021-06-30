@@ -22,12 +22,6 @@
 
 
 
-    if(isset($_GET['logout'])){
-      session_unset();
-      session_destroy();
-      header("location:index.php");
-    }
-      
 ?>
 
 
@@ -38,7 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./image/icons/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css">
   
     <title> TEAM PAYAMAN | CLOTHING LINES </title>
@@ -72,35 +66,35 @@
 <!-- HEADER -->
 <header>
         <div class="logo">
-            <a href="index.php"><img src="./logo/logo.png" alt=""></a>
+            <a href="index.php"><img src="./image/logo/logo.png" alt=""></a>
         </div>
 
         <div class="nav-links">
           <div class="search">
               <input type="search" name="search" id="search">
-              <img src="./icons/search.png" id="search-icon">
+              <img src="./image/icons/search.png" id="search-icon">
           </div>
 
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#" class="shop-icon" > Shop <img src="./icons/down-arrow.png" alt=""></a></li>
+                <li><a href="#" class="shop-icon" > Shop <img src="./image/icons/down-arrow.png" alt=""></a></li>
             </ul>
 
             <div class="cart">
-                <a href="#"> <img src="./icons/shopping-bag.png"> </a>
+                <a href="#"> <img src="./image/icons/shopping-bag.png"> </a>
             </div>
 
             <div class="account">
-              <a href="#"> <img src="./icons/user.png" id="login-icon-click"> </a>
+              <a href="#"> <img src="./image/icons/user.png" id="login-icon-click"> </a>
         
-              <a id="user-profile"> <img src="./user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
+              <a id="user-profile"> <img src="./image/user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
             </div>
         </div>
 
         <div class="nav-account">
-            <form action="index.php" method="GET">
+            <form action="./processes/login-process.php" method="GET">
               <ul>
                 <li> 
                   <h4>
@@ -129,7 +123,7 @@
       <!--SHOP HOVER-->
         <div class="shop-hover">
              <div class="hover-image">
-               <img src="./models/tp.jpg" alt="">
+               <img src="./image/models/tp.jpg" alt="">
              </div>
 
              <div class="brands">
@@ -200,11 +194,11 @@
            </form>
               <div class="other-acc">
                   <button id="fb-btn">
-                      <img src="./icons/facebook (1).png" alt="">
+                      <img src="./image/icons/facebook (1).png" alt="">
                       <p>Facebook</p>
                   </button>
                   <button id="google-btn">
-                      <img src="./icons/google.png" alt="">
+                      <img src="./image/icons/google.png" alt="">
                       <p> Google </p>
                   </button>
               </div>
@@ -270,7 +264,7 @@
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
               <a href="#"> Shop now </a>
             </div>
-            <img src="./models/team-payaman.png" alt="">
+            <img src="./image/models/team-payaman.png" alt="">
         </div>
 
         <div class="slide second">
@@ -279,7 +273,7 @@
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptate. </p>
               <a href="#"> Shop now </a>
             </div>
-            <img src="./models/viyLine.jpg" alt="">
+            <img src="./image/models/viyLine.jpg" alt="">
         </div>
         
         <div class="slide third">
@@ -289,7 +283,7 @@
               <a href="#"> Shop now </a>
             </div>
 
-            <img src="./models/viyLine.jpg" alt="">
+            <img src="./image/models/viyLine.jpg" alt="">
         </div>
 
         <div class="slide fourth">
@@ -299,7 +293,7 @@
               <a href="#"> Shop now </a>
             </div>
 
-            <img src="./models/viyLine.jpg" alt="">
+            <img src="./image/models/viyLine.jpg" alt="">
         </div>
         
 
@@ -339,7 +333,7 @@
 
     <div class="promotion-container">
       <div class="promotion-item">
-        <img src="./models/top-model.png" alt="">
+        <img src="./image/models/top-model.png" alt="">
         <div class="overlay">
           <div class="text">
           <h2>T-SHIRT</h2>
@@ -349,7 +343,7 @@
       </div>
 
       <div class="promotion-item">
-        <img src="./models/beans.png" alt="">
+        <img src="./image/models/beans.png" alt="">
         <div class="overlay">
           <div class="text">
           <h2>BEANIES</h2>
@@ -359,7 +353,7 @@
       </div>
 
       <div class="promotion-item">
-        <img src="./purse/purse.png" alt="">
+        <img src="./Products/purse.png" alt="">
         <div class="overlay">
           <div class="text">
           <h2>PURSE</h2>
@@ -391,7 +385,7 @@
               <div class="product-box">
               
                   <div class="container image-holder">
-                      <a href="./php/product-details.php?id=<?=$rows['PRODUCTID']?>"> <img src="./shirts/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
+                      <a href="./php/product-details.php?id=<?=$rows['PRODUCTID']?>"> <img src="./Products/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
                   </div>
                   <div class="container product-info-holder">
                       <h3> &#8369; <?=$rows['PRODUCTPRICE']?>.00 </h3>
@@ -400,7 +394,7 @@
 
                   <input type="checkbox" name="wish" id="icon-wish">
                   <div class="icon-cart-holder">
-                    <img src="./icons/shopping-cart.png" alt="" id="icon-cart">
+                    <img src="./image/icons/shopping-cart.png" alt="" id="icon-cart">
                   </div>
               </div> 
             </li>
@@ -479,14 +473,14 @@
 
       <div class="payment">
       <h1>PAYMENT</h1>
-          <img src="./icons/gcash.png" alt="" class="gcash">
-          <img src="./icons/paypal.png" alt="" class="paypal">
+          <img src="./image/icons/gcash.png" alt="" class="gcash">
+          <img src="./image/icons/paypal.png" alt="" class="paypal">
       </div>
 
       <div class="logistic">
       <h1>LOGISTICS</h1>
-      <img src="./icons/JnT.png" alt="" class="JT">
-          <img src="./icons/ninja.png" alt="" class="ninja">
+      <img src="./image/icons/JnT.png" alt="" class="JT">
+          <img src="./image/icons/ninja.png" alt="" class="ninja">
       </div>
 
 
@@ -503,13 +497,13 @@
       <div class="contact">
         <h1>CONTACT US</h1>
         <ul>
-          <li><img src="./icons/gmail.png" alt="" class="gmail"></li>
+          <li><img src="./image/icons/gmail.png" alt="" class="gmail"></li>
           <p class="mail"><a href="#">tpclothingline@gmail.com</a></p>
         </ul>
       </div>
 
       <div class="number">
-          <img src="./icons/phone-call (1).png" alt="" class="phone">
+          <img src="./image/icons/phone-call (1).png" alt="" class="phone">
           <p><a href="#">0912-345-6789</a></p>
         </div>
 </div>

@@ -87,6 +87,10 @@
     margin-right: 10px;
 }
 
+.product-details .qty-container{
+    display: flex;
+    align-items: center;
+}
 .product-details .qty-container button{
     border: none;
     background: whitesmoke;
@@ -94,7 +98,13 @@
     padding: 0 4px;
     outline: none;
     cursor: pointer;
+    margin: 0 5px;
 }
+
+.product-details .qty-container p{
+    margin-left: 10px;
+}
+
 .product-details .qty-container input{
     width: 50px;
     font-size: 16px;
