@@ -68,6 +68,37 @@ header .nav-links div{
     height: 24px;
 }
 
+header .nav-links .search{
+  width: max-content;
+  height: max-content;
+  display: flex;
+  padding: 4px;
+  padding-right: 10px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(219, 219, 219);
+  margin-right: 20px;
+}
+
+header .nav-links .search img{
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+header .nav-links .search input{
+  width: 350px;
+  border: none;
+  background: rgb(235, 235, 235);
+  font-size: 16px;
+  padding: 5px 10px;
+  outline: none;
+  transition: ease-in-out .2s;
+}
+header .nav-links .search input:hover{
+  background: whitesmoke;
+}
+
 header .nav-links div img{
     width: 100%;
     height: 100%;
@@ -116,6 +147,7 @@ header .shop-hover div:first-child{
 header .shop-hover div h1{
   margin-top: 10px;
   font-size: 24px;
+  text-transform: uppercase;
 } 
 
 
@@ -149,8 +181,8 @@ header .nav-account{
   top: 100%;
   background: whitesmoke;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
-  width: 150px;
-  height: 150px;
+  width: max-content;
+  height: max-content;
   padding: 7px;
   display: none;
 
@@ -209,7 +241,7 @@ header .nav-account ul li a:hover{
   top: -100%;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.712);
+  background: rgba(0, 0, 0, 0.812);
   z-index: 100;
   transition: all ease-in-out .7s;
 
@@ -269,7 +301,7 @@ header .nav-account ul li a:hover{
   margin-top: 20px;
   width: 100%;
 }
-.modal-bg .login-container .login-box table input, button{
+.modal-bg .login-container .login-box table input, .login-box table button{
   margin: 7px 0;
   width: 100%;
   font-size: 16px;
@@ -372,7 +404,7 @@ header .nav-account ul li a:hover{
   margin-top: 10px;
   width: 100%;
 }
-.modal-bg .login-container .reg-box table input, button{
+.modal-bg .login-container .reg-box table input, .reg-box table button{
   margin: 5px 0;
   width: 100%;
   font-size: 14px;
@@ -389,9 +421,23 @@ header .nav-account ul li a:hover{
 }
 
 .modal-bg .login-container .reg-box .log-now{
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   margin-top: 10px;
+}
+
+.modal-bg .login-container .reg-box .agree-terms{
+  font-size: 10px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.modal-bg .login-container .reg-box .agree-terms a{
+  color:rgb(233, 106, 106);
+  text-decoration: none;
+}
+.modal-bg .login-container .reg-box .agree-terms a:hover{
+  text-decoration: underline;
 }
 
 .modal-bg .login-container .reg-box .log-now #log-click{

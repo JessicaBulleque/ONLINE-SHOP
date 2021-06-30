@@ -77,7 +77,8 @@
 
         <div class="nav-links">
           <div class="search">
-            <a href="#"><img src="./icons/search.png" alt=""></a>
+              <input type="search" name="search" id="search">
+              <img src="./icons/search.png" id="search-icon">
           </div>
 
             <ul>
@@ -93,12 +94,8 @@
 
             <div class="account">
               <a href="#"> <img src="./icons/user.png" id="login-icon-click"> </a>
-              
-              <?php if(!empty($userSelectedRow['PROFILEPIC'])){ ?>
+        
               <a id="user-profile"> <img src="./user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
-              <?php } else{ ?>
-                <a id="user-profile"> <img src="./user-profile/default-profile.jpg" alt=""></a>
-              <?php } ?>
             </div>
         </div>
 
@@ -113,7 +110,7 @@
                 </li>
 
                 <li>
-                  <a href="#"> My Account </a>
+                  <a href="./php/image-add.php"> My Account </a>
                 </li>
 
                 <li>
@@ -136,7 +133,7 @@
              </div>
 
              <div class="brands">
-               <h1>Brands</h1>
+               <h1> Brands </h1>
                <ul>
                  <li><a href="#">Viy Line</a></li>
                  <li><a href="#">Giyang Clothing</a></li>
@@ -155,13 +152,13 @@
                </ul>
              </div>
 
-             <div class="branch">
-             <h1>Branch</h1>
+             <div class="faqs">
+             <h1> Faqs </h1>
                <ul>
-               <li><a href="#">Quezon City</a></li>
-                 <li><a href="#">Paranaque</a></li>
-                 <li><a href="#">Laguna</a></li>
-                 <li><a href="#">Cavite</a></li>
+                  <li><a href="#"> Other offer products </a></li>
+                  <li><a href="#"> About us </a></li>
+                  <li><a href="#"> Privacy policy </a></li>
+                  <li><a href="#"> Terms and agreement </a></li>
                </ul>
              </div>
         </div>
@@ -219,22 +216,22 @@
 
         <div class="container reg-box">
             <h1> Register here </h1>
-            <form action="" method="POST">
+            <form action="./processes/login-process.php" method="POST">
                 <table>
                   <tr>
-                    <td><input type="text" placeholder="Firstname"></td>
+                    <td><input type="text" name="fname" placeholder="Firstname"></td>
                   </tr>
                   <tr>
-                    <td><input type="text" placeholder="Lastname"></td>
+                    <td><input type="text" name="lname" placeholder="Lastname"></td>
                   </tr>
                   <tr>
-                    <td><input type="text" placeholder="Address"></td>
+                    <td><input type="text" name="address"placeholder="Address"></td>
                   </tr>
                   <tr>
-                    <td><input type="email" placeholder="Email address"></td>
+                    <td><input type="email" name="useremail" placeholder="Email address"></td>
                   </tr>
                   <tr>
-                    <td><input type="password" placeholder="Password"></td>
+                    <td><input type="password" name="pword" placeholder="Password"></td>
                   </tr>
                   <tr>
                     <td> <button type="submit" name="register-btn" id="register-btn"> Register </button></td>
@@ -244,6 +241,10 @@
 
               <div class="log-now">
                   <p> Already have an account? <span id="log-click"> Sign in now. </span></p>
+              </div>
+
+              <div class="agree-terms">
+                  <p> By signing up, you agree to our <a href="#"> terms and agreement </a></p>
               </div>
         </div>
     </div>

@@ -20,4 +20,37 @@
             }
         }
     }
+
+
+    if(isset($_POST['register-btn'])){
+        $firstname = $_POST['fname'];
+        $lastname = $_POST['lname'];
+        $address = $_POST['address'];
+        $emailadd = $_POST['useremail'];
+        $password = $_POST['pword'];
+
+        $sel = oci_parse($connection, "SELECT COUNT(*) AS TOTAL FROM customeracc");
+        oci_execute($sel);
+        $cnt = oci_fetch_assoc($sel);
+
+        $custID = 21000 + ($cnt['TOTAL'] + 1);
+
+        echo $custID."<br>";
+        echo $firstname."<br>";
+        echo $lastname."<br>";
+        echo $address."<br>";
+        echo $emailadd."<br>";
+        echo $password."<br>";
+
+        $ins = oci_parse($connection, "INSERT INTO customeracc (USERID, FIRSTNAME, LASTNAME, PROFILEPIC, ADDRESS, EMAIL, PASS) VALUES ($custID, '$firstname','$lastname','default-profile.jpg','$address', '$emailadd', '$password')
+        ");
+
+        oci_execute($ins);
+
+        $_SESSION['userID'] = $custID;
+        header("location:../index.php");
+       
+        
+        
+    }
 ?>
