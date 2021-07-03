@@ -21,12 +21,12 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into SYSTEM.PRODUCTS
 SET DEFINE OFF;
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (1,'Team Payaman T-shirt',800,'TP1.png',200,null,null);
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (2,'Boss Apparel T-shirt',520,'Boss1.png',null,null,null);
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (3,'Giyang T-shirt',450,'Giyang.png',null,null,null);
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (4,'WLKJN T-shirt',700,'wlkjn shirt.png',null,null,null);
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (5,'Boss Apparel',800,'Boss2.png',null,null,null);
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (6,'Sample Shirt',500,'TP1.png',null,null,null);
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (1,'Team Payaman T-shirt',800,'TP1.png',200,'clothes','TP');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (2,'Boss Apparel T-shirt',520,'Boss1.png',150,'clothes','Boss Apparel');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (3,'Giyang T-shirt',450,'Giyang.png',300,'clothes','Giyang');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (4,'WLKJN T-shirt',700,'wlkjn shirt.png',100,'clothes','WLKJN');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (5,'Boss Apparel',800,'Boss2.png',150,'clothes','Boss Apparel');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (6,'Team Payaman Liptint',800,'Viytints.jpg',50,'Cosmetic','Viyline');
 --------------------------------------------------------
 --  DDL for Index SYS_C007504
 --------------------------------------------------------

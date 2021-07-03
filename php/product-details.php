@@ -6,6 +6,11 @@
     $userID = $_SESSION['userID'];
     $productID = $_GET['id'];
 
+    // SELECT USERS'
+    $selectUser = oci_parse($connection, "SELECT * FROM CUSTOMERACC WHERE USERID = $userID");
+    oci_execute($selectUser);
+    $userSelectedRow = oci_fetch_assoc($selectUser);
+
     // SELECT PRODUCT BASE ON PRODUCT ID
     $selectProduct = oci_parse($connection, "SELECT * FROM PRODUCTS WHERE PRODUCTID = $productID");
     oci_execute($selectProduct);    

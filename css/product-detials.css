@@ -222,7 +222,6 @@
     padding: 0;
     display: flex;
 }
-.product-details-container .product-info-details div.product-quantity .qty {}
 .product-details-container .product-info-details div.product-quantity .qty input[type="text"]{
     padding: 0 10px;
     width: 45px;
