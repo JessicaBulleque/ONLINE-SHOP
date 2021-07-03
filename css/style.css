@@ -828,10 +828,6 @@ header .nav-account ul li a:hover{
   display: inline-block;
 }
 
-.product-container .row{
-  display: flex;
-  justify-content: center;
-}
 
 .product-container .product-box{
   position: relative;
