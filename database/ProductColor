@@ -1,0 +1,25 @@
+--------------------------------------------------------
+--  File created - Saturday-July-03-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table PRODUCT_COLOR
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."PRODUCT_COLOR" 
+   (	"PRODUCTID" NUMBER(11,0), 
+	"COLOR" VARCHAR2(55 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into SYSTEM.PRODUCT_COLOR
+SET DEFINE OFF;
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR) values (1,'Black');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR) values (1,'White');
+--------------------------------------------------------
+--  Constraints for Table PRODUCT_COLOR
+--------------------------------------------------------
+
+  ALTER TABLE "SYSTEM"."PRODUCT_COLOR" MODIFY ("PRODUCTID" NOT NULL ENABLE);
