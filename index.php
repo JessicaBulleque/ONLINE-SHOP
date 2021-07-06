@@ -7,7 +7,7 @@
 
 
     // THIS IS A VARIABLE HANDLE FOR QUERY
-    $qry = "select * from products order by PRODUCTID DESC";
+    $qry = "select * from products order by PRODUCTID DESC FETCH FIRST 10 ROWS ONLY";
 
     // OCI_PARSE FOR CONNECTION DB AND QUERY
     $result = oci_parse($connection, $qry);

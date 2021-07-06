@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-July-03-2021   
+--  File created - Tuesday-July-06-2021   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table PRODUCT_SIZE
@@ -16,9 +16,26 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into SYSTEM.PRODUCT_SIZE
 SET DEFINE OFF;
-Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (1,'Small');
-Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (1,'Medium');
-Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (1,'Large');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (1,'No Availble Size');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (3,'No Available Size');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (4,'No Available Size');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (2,'Free Size');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (5,'No Available Size');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (6,'No Available Size');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (7,'S');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (7,'M');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (7,'L');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (7,'XL');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (7,'2XL');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (8,'S');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (8,'M');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (8,'L');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (8,'XL');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (8,'2XL');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (9,'S');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (9,'M');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (9,'L');
+Insert into SYSTEM.PRODUCT_SIZE (PRODUCTID,PRODUCTSIZE) values (10,'No Available Size');
 --------------------------------------------------------
 --  Constraints for Table PRODUCT_SIZE
 --------------------------------------------------------

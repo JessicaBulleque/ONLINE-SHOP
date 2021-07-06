@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-July-03-2021   
+--  File created - Tuesday-July-06-2021   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table PRODUCT_COLOR
@@ -7,7 +7,8 @@
 
   CREATE TABLE "SYSTEM"."PRODUCT_COLOR" 
    (	"PRODUCTID" NUMBER(11,0), 
-	"COLOR" VARCHAR2(55 BYTE)
+	"COLOR" VARCHAR2(55 BYTE), 
+	"IMAGE" VARCHAR2(55 BYTE)
    ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
  NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -16,8 +17,19 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into SYSTEM.PRODUCT_COLOR
 SET DEFINE OFF;
-Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR) values (1,'Black');
-Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR) values (1,'White');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (1,'Black','BlackBossBag.png');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (1,'Yellow','YellowBeanie.jpg');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (2,'White','WhiteBeanie.jpg');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (2,'Black','BlackBeanie.jpg');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (2,'Purple','PurpleBeanie.jpg');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (2,'Maroon','MaroonBeanie.jpg');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (2,'Orange','OrangeBeanie.Jpg');
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (8,'Black',null);
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (8,'Yellow',null);
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (8,'Orange',null);
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (8,'White',null);
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (9,'Black',null);
+Insert into SYSTEM.PRODUCT_COLOR (PRODUCTID,COLOR,IMAGE) values (9,'White',null);
 --------------------------------------------------------
 --  Constraints for Table PRODUCT_COLOR
 --------------------------------------------------------

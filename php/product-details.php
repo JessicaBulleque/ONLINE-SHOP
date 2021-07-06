@@ -16,12 +16,12 @@
     oci_execute($selectProduct);    
     $selResult = oci_fetch_assoc($selectProduct);
 
-    // SELECT ALL SIZE BASE ON PRODUCTS
+    // SELECT ALL COLOR BASE ON PRODUCTS
     $selectColor = oci_parse($connection, "SELECT * FROM PRODUCT_COLOR WHERE PRODUCTID = $productID");
     oci_execute($selectColor);
 
     // SELECT ALL SIZE BASE ON PRODUCTS
-    $selectSize = oci_parse($connection, "SELECT PRODUCTSIZE, SUBSTR(PRODUCTSIZE, 1,1) AS FIRSTLETTER FROM PRODUCT_SIZE WHERE PRODUCTID = $productID");
+    $selectSize = oci_parse($connection, "SELECT * FROM PRODUCT_SIZE WHERE PRODUCTID = $productID");
     oci_execute($selectSize);
 
     // SELECT ALL PRODUCT BASE ON BRAND'S SELECTED PRODUCT
@@ -313,7 +313,7 @@
                 <ul>
                   <?php while($size = oci_fetch_assoc($selectSize)) { ?>
                     <div class="size-container">
-                        <p> <?=$size['FIRSTLETTER']?> </p>
+                        <p> <?=$size['PRODUCTSIZE']?> </p>
                         <input type="radio" name="size" value="<?=$size['PRODUCTSIZE']?>">
                     </div>
                   <?php } ?>
@@ -382,7 +382,7 @@
                   <img src="../image/user-profile/default-profile.jpg" alt="">
               </div>
               <div class="user">
-                  <p> Mark Melvin Bacabis </p>
+                  <p> Juliana Balingasa</p>
               </div>
           </div>
           <div class="user-review">
@@ -395,7 +395,7 @@
                   <img src="../image/user-profile/default-profile.jpg" alt="">
               </div>
               <div class="user">
-                  <p> Mark Melvin Bacabis </p>
+                  <p> Jessica Bulleque </p>
               </div>
           </div>
           <div class="user-review">
@@ -408,7 +408,7 @@
                   <img src="../image/user-profile/default-profile.jpg" alt="">
               </div>
               <div class="user">
-                  <p> Mark Melvin Bacabis </p>
+                  <p> Justine Halliasgo </p>
               </div>
           </div>
           <div class="user-review">
@@ -421,14 +421,39 @@
                   <img src="../image/user-profile/default-profile.jpg" alt="">
               </div>
               <div class="user">
-                  <p> Mark Melvin Bacabis </p>
+                  <p> Angelica Jalmasco </p>
               </div>
           </div>
           <div class="user-review">
               <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At tempora vel sint ut nobis dolore commodi pariatur, beatae excepturi quibusdam laudantium aperiam adipisci, tenetur temporibus, reprehenderit porro quia corrupti nulla totam ipsa? Atque culpa aliquid distinctio odit rem praesentium, quae ipsum sapiente qui, saepe, fugiat omnis. Et praesentium fugiat eius!</p>
           </div>
       </div>
-
+      <div class="user-review-container">
+          <div class="user-name">
+              <div class="profile-pic">
+                  <img src="../image/user-profile/default-profile.jpg" alt="">
+              </div>
+              <div class="user">
+                  <p> Theresa Lopez </p>
+              </div>
+          </div>
+          <div class="user-review">
+              <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At tempora vel sint ut nobis dolore commodi pariatur, beatae excepturi quibusdam laudantium aperiam adipisci, tenetur temporibus, reprehenderit porro quia corrupti nulla totam ipsa? Atque culpa aliquid distinctio odit rem praesentium, quae ipsum sapiente qui, saepe, fugiat omnis. Et praesentium fugiat eius!</p>
+          </div>
+      </div>
+      <div class="user-review-container">
+          <div class="user-name">
+              <div class="profile-pic">
+                  <img src="../image/user-profile/default-profile.jpg" alt="">
+              </div>
+              <div class="user">
+                  <p> Jovelyn Vitales </p>
+              </div>
+          </div>
+          <div class="user-review">
+              <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At tempora vel sint ut nobis dolore commodi pariatur, beatae excepturi quibusdam laudantium aperiam adipisci, tenetur temporibus, reprehenderit porro quia corrupti nulla totam ipsa? Atque culpa aliquid distinctio odit rem praesentium, quae ipsum sapiente qui, saepe, fugiat omnis. Et praesentium fugiat eius!</p>
+          </div>
+      </div>
       <div class="user-comment">
 
       </div>

@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-July-03-2021   
+--  File created - Tuesday-July-06-2021   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table PRODUCTS
@@ -21,12 +21,17 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into SYSTEM.PRODUCTS
 SET DEFINE OFF;
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (1,'Team Payaman T-shirt',800,'TP1.png',200,'clothes','TP');
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (2,'Boss Apparel T-shirt',520,'Boss1.png',150,'clothes','Boss Apparel');
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (3,'Giyang T-shirt',450,'Giyang.png',300,'clothes','Giyang');
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (4,'WLKJN T-shirt',700,'wlkjn shirt.png',100,'clothes','WLKJN');
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (5,'Boss Apparel',800,'Boss2.png',150,'clothes','Boss Apparel');
-Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (6,'Team Payaman Liptint',800,'Viytints.jpg',50,'Cosmetic','Viyline');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (1,'Boss Apparel Belt Bag',550,'YellowBossBag.png',20,'Bag','Boss Apparel');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (2,'Giyang Beanie
+',320,'Whitebeanie.jpg',32,'Beanie','Giyang');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (3,'Team Payaman Sauce',150,'sauce.jpg',10,'Sauce','Sauce');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (4,'Viy Line Scent For Men',450,'VLScent4men.jpg',65,'Scent','ViyLine');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (5,'Viy Line Scent For Women',450,'VLScent4women.jpg',69,'Scent','ViyLine');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (6,'WLKJN Cap',230,'wlkjn.jpg',50,'Cap','WLKJN');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (7,'Team Payaman Jersey',330,'TPJersey.png',100,'Clothes','Team Payaman');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (8,'Boss Apparel (Mafia Boss)',750,'MafiaBoss.png',21,'Clothes','Boss Apparel');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (9,'Giyang T-shirt',565,'giyang.png',12,'Clothes','Giyang');
+Insert into SYSTEM.PRODUCTS (PRODUCTID,PRODUCTNAME,PRODUCTPRICE,PICTURE,STOCKS,TYPE,BRAND) values (10,'WLKJN Purse',110,'purse.png',25,'Purse','WLKJN');
 --------------------------------------------------------
 --  DDL for Index SYS_C007504
 --------------------------------------------------------
