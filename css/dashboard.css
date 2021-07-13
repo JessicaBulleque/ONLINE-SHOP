@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: poppins;
+}
+
+.admin-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 0px;
+}
+
+
+
+/* FOR ADMIN PANEL */
+.admin-container .admin-panel{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background: rgb(47, 58, 76);
+    display: flexbox;
+    display: -ms-flexbox;
+    display: -ms-inline-flexbox;
+    color:rgb(50, 54, 70);
+    padding: 0px;
+}
+
+
+
+.admin-container .admin-panel h2{
+    width: 100%;
+    padding: 10.3px 0;
+    text-align: center;
+    font-size: 28px;
+    color: rgb(231, 200, 20);
+}
+
+
+.admin-container .admin-panel ul{
+    width: 100%;
+}
+
+.admin-container .admin-panel ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 0 10%;
+
+}
+
+.admin-container .admin-panel ul li img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+.admin-container .admin-panel ul li a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+.admin-container .admin-panel .admin, .settings{
+    line-height: 38px;
+    margin: 10px 0;
+}
+
+.admin-container .admin-panel .settings h3{
+    color: rgb(27, 33, 44);
+    padding: 0 10%;
+}
+
+.admin-container .admin-panel .admin-footer{
+    position: absolute;
+    bottom: 0;
+    height: max-content;
+    text-align: center;
+    padding: 5px 10%;
+    font-size: 14px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENT */
+.admin-container .content-container{
+    background: aliceblue;
+    width: 100%;
+
+}
+
+
+/* HEADER */
+.admin-container .content-container .admin-header{
+    position: relative;
+    height: 8vh;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(26, 25, 25);
+    color: white;
+}
+
+
+.admin-container .content-container .admin-header .logout{
+    position: absolute;
+    right: 5%;
+}
+
+.admin-container .content-container .admin-header .logout a{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.admin-container .content-container .admin-header .logout a img{
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+}
+
+
+
+
+
+
+
+.admin-container .admin-panel .admin .admin-profile{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.admin-container .admin-panel .admin .admin-profile img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.admin-container .admin-panel .admin .admin-profile p{
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+/* DASHBOARD */
+.admin-container .content-container .admin-content{
+    padding: 2% 5%;
+    padding-top: 0;
+    height: 81.4%;
+    overflow-y: scroll;
+    display: block;
+    
+}
+
+.admin-container .content-container .admin-content .content-summary{
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+}
+
+.admin-container .content-container .admin-content .content-summary .summary-box{
+    width: 100%;
+    height: 70%;
+    background: rgb(244, 168, 150);
+    margin: 0 7px;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.3);
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.admin-container .content-container .admin-content .content-summary .summary-box .count-box{
+    display: flex;
+    height: 65%;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.admin-container .content-container .admin-content .content-summary .summary-box .label{
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid rgb(236, 131, 131);
+    
+}
+.admin-container .content-container .admin-content .content-summary .summary-box .label img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.admin-container .content-container .admin-content .content-sales{
+    height: 350px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.admin-container .content-container .admin-content .content-sales .sales{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background: whitesmoke;
+    margin: 0 7px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.2);
+    padding: 1% 2%;
+    display: inline-flex;
+    
+}
+
+.admin-container .content-container .admin-content .content-sales .sales h3{
+    margin-right: 19.5%;
+}
+
+.admin-container .content-container .admin-content .content-sales .user-feedbacks{
+    width: 50%;
+    background: rgb(248, 252, 255);
+}
+.admin-container .content-container .admin-content .content-sales .user-feedbacks h3{
+    margin-bottom: 10px;
+}
+
+.admin-container .content-container .admin-content .content-sales .user-feedbacks .new-customer{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid gray;
+    
+}
+
+.admin-container .content-container .admin-content .content-sales .user-feedbacks .new-customer .user-name h5{
+    color: rgb(44, 44, 44);
+   
+}
+.admin-container .content-container .admin-content .content-sales .user-feedbacks .new-customer .user-name h6{
+    color: rgb(56, 56, 56);
+    font-weight: normal;
+}
+
+
+.admin-container .content-container .admin-content .content-sales .user-feedbacks .new-customer .user-profile{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.admin-container .content-container .admin-content .content-sales .user-feedbacks .new-customer .user-profile img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+/* CUSTOMER */
+.admin-container .content-container .customer-container{
+    padding: 2% 5%;
+    height: 81.4%;
+    overflow-y: scroll;
+    display: none;
+    position: relative;
+}
+
+.admin-container .content-container .customer-container table{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+    background: whitesmoke;
+}
+
+.admin-container .content-container .customer-container table tr td, th{
+    padding: 5px 10px;
+}
+
+.admin-container .content-container .customer-container table tr th{
+    background: #222129;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CATEGORY*/
+.admin-container .content-container .category-container{
+    padding: 2% 5%;
+    height: 81.4%;
+    overflow-y: scroll;
+    display: none;
+    position: relative;
+}
+
+.admin-container .content-container .category-container table{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+    background: whitesmoke;
+}
+
+.admin-container .content-container .category-container table tr td, th{
+    padding: 5px 10px;
+}
+
+.admin-container .content-container .category-container table tr th{
+    background: #222129;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* PRODUCTS*/
+.admin-container .content-container .product-container{
+    padding: 2% 5%;
+    height: 81.4%;
+    overflow-y: scroll;
+    display: none;
+    position: relative;
+}
+
+.admin-container .content-container .product-container table{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+    background: whitesmoke;
+}
+
+.admin-container .content-container .product-container table tr td, th{
+    padding: 5px 10px;
+}
+
+.admin-container .content-container .product-container table tr th{
+    background: #222129;
+    color: white;
+}
+
+
+
+
+
+
+
+/* ORDERS*/
+.admin-container .content-container .orders-container{
+    padding: 2% 5%;
+    height: 81.4%;
+    overflow-y: scroll;
+    display: none;
+    position: relative;
+}
+
+.admin-container .content-container .orders-container table{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+    background: whitesmoke;
+}
+
+.admin-container .content-container .orders-container table tr td, th{
+    padding: 5px 10px;
+}
+
+.admin-container .content-container .orders-container table tr th{
+    background: #222129;
+    color: white;
+}
+
+
+
+
+
+
+/* SHIPMENT*/
+.admin-container .content-container .shipment-container{
+    padding: 2% 5%;
+    height: 81.4%;
+    overflow-y: scroll;
+    display: none;
+    position: relative;
+}
+
+.admin-container .content-container .shipment-container table{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+    background: whitesmoke;
+}
+
+.admin-container .content-container .shipment-container table tr td, th{
+    padding: 5px 10px;
+}
+
+.admin-container .content-container .shipment-container table tr th{
+    background: #222129;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

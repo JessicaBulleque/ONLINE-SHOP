@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* MODAL LOGIN */
+.modal-bg{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  .modal-bg .login-container{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background:rgb(255, 241, 214);
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .modal-bg .login-container .close{
+    position: absolute;
+    right: 4%;
+    top: 2%;
+    font-size: 30px;
+    transform: rotate(45deg);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    z-index: 1;
+    cursor: pointer;
+    transition: all ease-in-out .6s;
+  }
+  .modal-bg .login-container .close:hover{
+    transform: rotate(calc(90deg + 45deg));
+    background: cornsilk;
+    box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, .2);
+  }
+  
+  
+  .modal-bg .login-container .container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 7% 15%;
+    transition: left ease-in-out .5s;
+  }
+  
+  .modal-bg .login-container .login-box{
+    left: 0%;
+  }
+  
+  .modal-bg .login-container .login-box table{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .modal-bg .login-container .login-box table input, .login-box table button{
+    margin: 7px 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    
+  }
+  .modal-bg .login-container .login-box table #login-btn{
+    background:rgb(233, 106, 106);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .modal-bg .login-container .login-box .fp{
+    margin-top: -10px;
+    margin-left: 3px;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .modal-bg .login-container .login-box .division{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    color:rgba(128, 128, 128, 0.849);
+  }
+  .modal-bg .login-container .login-box .division hr{
+    border: 1px solid;
+    height: 1px;
+    width: 23%;
+    margin: 0 10px;
+  }
+  
+  .modal-bg .login-container .login-box .other-acc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .modal-bg .login-container .login-box .other-acc button{
+    width: 110px;
+    font-size: 14px;
+    color: white;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 20px;
+    margin: 7px;
+    cursor: pointer;
+  }
+  
+  .modal-bg .login-container .login-box .other-acc button#fb-btn{
+    background: rgb(74, 122, 255);
+    border: 1px solid rgb(74, 122, 255);
+  }
+  
+  .modal-bg .login-container .login-box .other-acc button#google-btn{
+    background: none;
+    border: 1px solid black;
+    color: black;
+  }
+  
+  
+  .modal-bg .login-container .login-box .other-acc button img{
+    width: 100%;
+    height: 20px;
+    margin-right: 3px;
+  }
+  
+  .modal-bg .login-container .login-box .reg-now{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .modal-bg .login-container .login-box .reg-now #reg-click{
+    color:rgb(233, 106, 106);
+    cursor: pointer;
+  }
+  
+  .modal-bg .login-container .login-box .reg-now #reg-click:hover{
+    color:rgb(177, 80, 80);
+  }
+  
+  
+  
+  .modal-bg .login-container .reg-box{
+    left: 100%;
+  }
+  
+  
+  
+  .modal-bg .login-container .reg-box table{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .modal-bg .login-container .reg-box table input, .reg-box table button{
+    margin: 5px 0;
+    width: 100%;
+    font-size: 14px;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+  }
+  
+  .modal-bg .login-container .reg-box table #register-btn{
+    background:rgb(233, 106, 106);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .modal-bg .login-container .reg-box .log-now{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .modal-bg .login-container .reg-box .agree-terms{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  .modal-bg .login-container .reg-box .agree-terms a{
+    color:rgb(233, 106, 106);
+    text-decoration: none;
+  }
+  .modal-bg .login-container .reg-box .agree-terms a:hover{
+    text-decoration: underline;
+  }
+  
+  .modal-bg .login-container .reg-box .log-now #log-click{
+    color:rgb(233, 106, 106);
+    cursor: pointer;
+  }
+  
+  .modal-bg .login-container .reg-box .log-now #log-click:hover{
+    color:rgb(177, 80, 80);
+  }
