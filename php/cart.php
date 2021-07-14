@@ -5,23 +5,26 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- STYLE LINK -->
-      <link rel="stylesheet" href="./css/cart-style.css">
+      
+      <link rel="stylesheet" href="../css/cart-style.css">
       <title>Add To Cart</title>
   </head>
 
 
-  <body>
-      <header>
-          <div class="logo">
-              <h1> Team Payaman | CART </h1>
-          </div>
-          <nav>
-              <a href="#"> Home </a>
-              <div class="profile-user">
-                  <img src="./image/user-profile/default-profile.jpg" alt="Profile picture">
-              </div>
-          </nav>
-      </header>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="primary-header">
+        <a href="index.php"><img class="logo" src="../image/logo/Logo.svg" alt="Team Payaman Logo"> </a>
+
+         <nav class="secondary-nav">
+              <a href="#" class="register-link">Register</a>
+              <a href="#" class="login-link">Login</a>
+         </nav>
+    </div>
+</header>
+<!-- HEADER - END -->
 
     <div class="container">
       <section class="delivery-address"> 
@@ -79,7 +82,7 @@
                       </div>
 
                       <div class="product-img">
-                        <img src="./Products/TP1.png" alt="Product">
+                        <img src="../Products/TP1.png" alt="Product">
                       </div>
 
                       <div class="product-title">

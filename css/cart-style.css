@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url(style.css);
+
 *{
     margin: 0; 
     padding: 0;
@@ -7,43 +10,63 @@
 }
 body{
     padding-top: 10vh;
+    background: whitesmoke;
 }
+
 
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 10vh;
-    padding: 0 10%;
-    background: whitesmoke;
-
     position: fixed;
+    height: 10vh;
+    width: 100vw;
     top: 0%;
     z-index: 999;
+    background: white;
 }
 
-header .logo h1{
-    font-weight: normal;
-    font-size: 24px;
-}
 
-header nav{
+header .primary-header{
+    height: 10vh;
+    background: white;
+    padding: 0 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+} 
+
+
+
+header .primary-header .secondary-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
 }
-header nav a{
+
+header .primary-header .secondary-nav a{
     text-decoration: none;
-    color: black;
+    margin: 0 7px;
+    color:var(--titleText);
 }
 
-
-header nav img{
-    width: 40px;
-    border-radius: 50%;
-    margin-left: 20px;
+header .primary-header .secondary-nav a.login-link{
+    color: var(--primaryColor);
+    padding: 5px 20px;
+    border-radius: 5em;
+    border: 2px solid var(--primaryColor);
 }
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60,8 +83,8 @@ header nav img{
     margin: 10px 0;
 }
 .container .delivery-address{ 
-    padding: 3%;
-    background: #EBF0F1;
+    background: #ffffff;
+    border: 10px solid var(--primaryColor);
 }
 .container .delivery-address h2{
     padding: 0 5%;

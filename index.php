@@ -70,7 +70,7 @@
         <a href="index.php"><img class="logo" src="./image/logo/Logo.svg" alt="Team Payaman Logo"> </a>
 
          <div class="search-bar">
-              <input type="search" id="search" name="search">
+              <input type="search" id="search" name="search" placeholder="Search products here">
               <button class="search-icon"> Search </button>
          </div>
 
@@ -88,7 +88,6 @@
         </ul>
     </div>
 </header>
- 
 <!-- HEADER - END -->
 
 <!--IMAGE SLIDER-->

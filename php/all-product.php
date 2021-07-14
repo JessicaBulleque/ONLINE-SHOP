@@ -5,7 +5,8 @@
 
     $userID = $_SESSION['userID'];
 
-
+    $select = oci_parse($connection, "SELECT * FROM PRODUCTS");
+    oci_execute($select);
 
 ?>
 
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="../image/icons/favicon.png" type="image/x-icon" />
+    <!-- AJAX LINK -->
     
   
     <title> TEAM PAYAMAN | CLOTHING LINES </title>
@@ -51,7 +53,6 @@
         </ul>
     </div>
 </header>
- 
 <!-- HEADER - END -->
 
 <section>
@@ -61,6 +62,30 @@
         <option value="Brand"> Brands </option>
         <option value="Brand"> Brands </option>
     </select>
+
+    <div class="product-container">
+        <ul>
+        <?php while($rows = oci_fetch_assoc($select)) {?>
+            <li>
+                <div class="product-box">
+                    <div class="container image-holder">
+                        <a href="../php/product-details.php?id=<?=$rows['PRODUCTID']?>"> <img src="../Products/<?=$rows['PICTURE']?>" alt="" srcset=""> </a>
+                    </div>
+                    <div class="container product-info-holder">
+                        <h3> &#8369; <?=$rows['PRODUCTPRICE']?>.00 </h3>
+                        <p> <?=$rows['PRODUCTNAME']?> </p>
+                    </div>
+
+                    <input type="checkbox" name="wish" id="icon-wish">
+                    <div class="icon-cart-holder">
+                        <img src="../image/icons/shopping-cart.png" alt="" id="icon-cart">
+                    </div>
+                </div> 
+            </li>
+        <?php } ?>
+        </ul>
+            
+    </div>
 </section>
 
 
