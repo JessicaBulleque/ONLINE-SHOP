@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins';
+  box-sizing: border-box;
+}
+:root{
+  --bodyBG: #F1F1F1;
+  --headerColor:#FFFFFF;
+  --loginContainer:#FFFFFF;
+  --submitButton: #F29B45;
+  --submitHover: #db8834;
+  --inputBorder: #dfdbdb;
+  --linkColor: #bd0ab7;
+  --linkHover: #ff00f7;
+}
+
+body{
+  background-color: var(--bodyBG);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--headerColor);
+  z-index: 900;
+}
+
+.header .logo{
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LOGIN*/
+.login-box{
+  position: relative;
+  height: 360px;
+  width: 450px;
+  background-color: var(--loginContainer);
+  margin-top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  padding-top: 10px;
+}
+
+.login-box h1{
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+
+.login-box form{
+  position: absolute;
+  left: 10%;
+  width: 80%;
+}
+
+.login-box form label{
+  font-size: 20px;
+}
+
+.login-box form a {
+  font-size: 12px;
+  color: var(--linkColor);
+}
+
+.login-box form a:hover {
+  color: var(--linkHover);
+}
+
+.login-box form input{
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+  padding-left:  7px;
+  font-size: 16px;
+  border: 1px solid var(--inputBorder);
+}
+
+.login-box form input[type='password']{
+  margin-bottom: 3px;
+}
+
+.login-box form input[type='submit']{
+  font-size: 22px;
+  cursor: pointer;
+  background-color: var(--submitButton);
+  color: white;
+  border: none;
+  margin-top: 12px;
+}
+
+.login-box form input[type='submit']:hover{
+  background-color: var(--submitHover);
+  transition: ease-in-out .3s;
+}
+
+.login-box .account{
+  margin: 55% 10%;
+}
+
+.login-box .account a{
+  color: var(--linkColor);
+  text-decoration: none;
+}
+
+.login-box .account a:hover{
+  color: var(--linkHover);
+}
+/*LOGIN END HERE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*REGISTER STARTS HERE*/
+.signup-box{
+  position: relative;
+  height: 610px;
+  width: 450px;
+  background-color: var(--loginContainer);
+  margin-top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.signup-box h1{
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.signup-box form{
+  position: absolute;
+  left: 10%;
+  width: 80%;
+}
+
+.signup-box form label{
+  font-size: 20px;
+}
+
+.signup-box a {
+  font-size: 12px;
+  color: var(--linkColor);
+}
+
+.signup-box form a:hover {
+  color: var(--linkHover);
+}
+
+.signup-box form input{
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: none;
+  padding-left:  7px;
+  font-size: 16px;
+  border: 1px solid var(--inputBorder);
+}
+
+.signup-box form input[type='submit']{
+  font-size: 22px;
+  cursor: pointer;
+  background-color: var(--submitButton);
+  color: white;
+  border: none;
+  margin-top: 12px;
+}
+
+.signup-box form input[type='submit']:hover{
+  background-color: var(--submitHover);
+  transition: ease-in-out .3s;
+}
+
+.signup-box .TandC{
+  font-size: 14px;
+  margin: 106% 10%;
+}
+
+
+.account2{
+  position: absolute;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.account2 a{
+  color: var(--linkColor);
+  text-decoration: none;
+}
+.account2 a:hover{
+  color: var(--linkHover);
+}
+
+
+/*REGISTER ENDS HERE*/

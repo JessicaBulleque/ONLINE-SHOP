@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="39" viewBox="0 0 41 39">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 64 64">
+      <image width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACFgAAAhYBt2mHsgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQYSURBVHic5Zvfi1VVFMc/3zFUsmIme6mQNB8nRbEnA5OK8EGSeqoHX4OeehD/gvBF8UmCcIKpLIgkEhKKKEr78TQRlb+aoYwcVAp/IGmOjrN62GeGy5lz7zl7n33OPcf7hQ33rrPXl3W+7L3uXnvvi5kBrAbeB2YAy2nngTfMjLuhkQgwXuDF021Hv4OP0YZw2Iw/XgnwaRzmBXgnwHddxDj6BpkZkoaA54EXgWVd+m4B1nR8nwVWmNmtimOsFEpyQH5HaS+wO2Veb2a/Ro+qRgzld1nAiQxb66eBjwAnM2xPxAqkX/AR4DQwl7INjgBmdgP4M2UeHAESpPPAakn3xQqmH/AVIJ0HBIxGiqUvuMezf1YifFXSxhjB1ITbwLdmNgngVzjABvxrhia2a8DTnbVAUZwB7nj6NBH3A7vAMweY2U3g9yoi6gME/kkQsvNAG/E5DK4A/wEfQJgAWTVB2/CRmV2FwR0BY/MfCpfDCw7SUuA6/muIpuCUmS0s3rxHQLIBMhU1pHox1vklZApAe6fBDPBepyFUgLYmwo/N7HKnYdBGwMG0YZAEmDSzY2ljqABTQNt2g8eyjEECmNks8FupcOrFLeDdrAehIwDaNQ2OmNk/WQ8GRYDM4Q+DIcAfwFfdHpYRoC1rgbetx3rfuxZYcJSWAP8CywMDqwOzwCozu9itQ/AIMLM7uC2yJuPTXi8P5aYAND8PLFr5pVFWgCbngePAF3mdytb0WSPgJ2CyJG8ZGPAzLvmlzzIXoQoBvjazXSV5a0PZKXAWuJGyterAtJQAye/rqZS5VZcmyo4AWDwNHpb0YATeWhBjYzMrD0xIamq5PAN8Ahwws0tVCbAmw9YkrAdGgNdjTIG23hLbDhFygJmdww2ptuEwxDvceA03FZ4BlkTirAozuJcfhxLV4N2CGDmg1ahFAEkjyX3k2LzDyb5EMCoTQNJOSUckTQOXgauSjknaI+mBErw7JB2WdBa4AlyT9L2kfZJWehNG/wcGPAIcpfclpb+A5zx5R3CXGnrxXgRe8OKN/PIjwHROkPNtrmiwuG23kwV5DdjZLwEOeQRpwAVgZQHefZ68V4BHaxUA2OoZ5Hx7K4d3FHc1z5f3wyJxx0yCz1bkt5WwZF0onpgCPBnot1bScAW8D0l6LK9TTAHWBvoJeLwC3kK+MQU4Heg3R++T5lDeQr4xBZgI9DtjZtcr4D1vZhfyOsUU4DMW/6WmCI7mPP8SV8HF5nWIvA7Yj99P1RRwbwHe3Z6808BwPxZCy4FfCgZ5E3iqIO8Q8E1B3tvAtsIxxxQgCXYF8CZuOnQLcgIY9eRdCuzBnfh24z0BbPLhrWxDRNIW4CXc7/g64BzwI/AdMG7unlEI7ybg5YR3A/A3TtAfcMdhXvnif7iDNlcp+zKkAAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <g id="Cart" transform="translate(-1116 -29)">
+    <rect id="shopping-cart" width="35" height="35" transform="translate(1116 33)" fill="url(#pattern)"/>
+    <g id="Group_3" data-name="Group 3" transform="translate(101 -4.036)">
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="10.5" cy="10.5" r="10.5" transform="translate(1035 33.036)" fill="#f29b45"/>
+      <text id="_2" data-name="2" transform="translate(1045 48.036)" fill="#fff" font-size="12" font-family="Poppins-Regular, Poppins" letter-spacing="0.037em"><tspan x="-3.45" y="0">2</tspan></text>
+    </g>
+  </g>
+</svg>
