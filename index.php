@@ -5,14 +5,14 @@
 
     $userID = $_SESSION['userID'];
 
-
+ 
     // THIS IS A VARIABLE HANDLE FOR QUERY
     $qry = "select * from products order by PRODUCTID DESC FETCH FIRST 10 ROWS ONLY";
 
-    // OCI_PARSE FOR CONNECTION DB AND QUERY
+    // OCI_PARSE FOR CONNECTION DB AND QUERY 
     $result = oci_parse($connection, $qry);
     // OCI_EXECUTE WILL EXECUTE THE $result OR YOUR QUERY
-    oci_execute($result);
+    oci_execute($result); 
 
 
     $selectUser = oci_parse($connection, "SELECT * FROM CUSTOMERACC WHERE USERID = $userID");
@@ -31,9 +31,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./image/icons/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/style.css">
+    
   
     <title> TEAM PAYAMAN | CLOTHING LINES </title>
 </head>
@@ -65,104 +66,30 @@
 
 <!-- HEADER -->
 <header>
-        <div class="logo">
-            <a href="index.php"><img src="./image/logo/logo.png" alt=""></a>
-        </div>
+    <div class="primary-header">
+        <a href="index.php"><img class="logo" src="./image/logo/Logo.svg" alt="Team Payaman Logo"> </a>
 
-        <div class="nav-links">
-          <div class="search">
-              <input type="search" name="search" id="search">
-              <img src="./image/icons/search.png" id="search-icon">
-          </div>
+         <div class="search-bar">
+              <input type="search" id="search" name="search">
+              <button class="search-icon"> Search </button>
+         </div>
 
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#" class="shop-icon" > Shop <img src="./image/icons/down-arrow.png" alt=""></a></li>
-            </ul>
+         <nav class="secondary-nav">
+              <a href="#" class="register-link">Register</a>
+              <a href="#" class="login-link">Login</a>
+         </nav>
+    </div>
+    <div class="sub-header">
+        <ul>
+            <li><a href="#" class="page"> Home </a> </li>
+            <li><a href="#"> Products</a>  </li>
+            <li><a href="#"> Blogs </a>  </li>
 
-            <div class="cart">
-                <a href="#"> <img src="./image/icons/shopping-bag.png"> </a>
-            </div>
-
-            <div class="account">
-              <a href="./userLogin.php"> <img src="./image/icons/user.png" id="login-icon-click"> </a>
-        
-              <a id="user-profile"> <img src="./image/user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
-            </div>
-        </div>
-
-        <div class="nav-account">
-            <form action="./processes/login-process.php" method="GET">
-              <ul>
-                <li> 
-                  <h4>
-                    <?=$userSelectedRow['FIRSTNAME']?> 
-                    <?=$userSelectedRow['LASTNAME']?>
-                  </h4>
-                </li>
-
-                <li>
-                  <a href="./php/image-add.php"> My Account </a>
-                </li>
-
-                <li>
-                  <a href="#"> My Purchase </a>
-                </li>
-
-                <li>
-                  <button type="submit" name="logout"> Logout </button>   
-                </li>
-              </ul>
-            </form>
-        </div>
-               
-
-
-      <!--SHOP HOVER-->
-        <div class="shop-hover">
-             <div class="hover-image">
-               <img src="./image/models/tp.jpg" alt="">
-             </div>
-
-             <div class="brands">
-               <h1> Brands </h1>
-               <ul>
-                 <li><a href="#">Viy Line</a></li>
-                 <li><a href="#">Giyang Clothing</a></li>
-                 <li><a href="#">Boss Apparel</a></li>
-                 <li><a href="#">WLKJN Clothing</a></li>
-               </ul>
-             </div>
-
-             <div class="branch">
-             <h1>Branch</h1>
-               <ul>
-               <li><a href="#">Quezon City</a></li>
-                 <li><a href="#">Paranaque</a></li>
-                 <li><a href="#">Laguna</a></li>
-                 <li><a href="#">Cavite</a></li>
-               </ul>
-             </div>
-
-             <div class="faqs">
-             <h1> Faqs </h1>
-               <ul>
-                  <li><a href="#"> Other offer products </a></li>
-                  <li><a href="#"> About us </a></li>
-                  <li><a href="#"> Privacy policy </a></li>
-                  <li><a href="#"> Terms and agreement </a></li>
-               </ul>
-             </div>
-        </div>
+        </ul>
+    </div>
 </header>
-
-
-
-
-
-
+ 
+<!-- HEADER - END -->
 
 <!--IMAGE SLIDER-->
 <div class="slider">
@@ -323,107 +250,62 @@
 
 
 
+<div class="shop-by-brand-container">
+      <h1> SHOP BY BRANDS </h1>
+
+      <div class="brands-container">
+            <img src="./image/logo/wlkjn-logo.png" alt="Logo">
+            <img src="./image/logo/viyLine-logo.jpg" alt="Logo">
+            <img src="./image/logo/boss1-logo.png" alt="Logo">
+            <img src="./image/logo/giyang-logo.png" alt="Logo">
+            <img src="./image/logo/cong-logo.png" alt="Logo">
+      </div>
+</div>
 
 
 
 
-
-
-
-
-
-
-
-<!--EXCLUSIVE SALES
-<div class="exclusive-sales-container">
-  <ul>
-    <li class="sample">
-      <div class="banner-container" id="banner-container">
-        <div class="info banner">
-          <img src="./sauce/sauce.jpg" alt="">
-        </div>
-
-        <div class="info text">
-          
-          <div class="text-info">
-            <h3>EXCLUSIVE SALES</h3>
-            <h1>Payaman Sauce Collection</h1>
-            <a href="#"><h3>View Collection</h3></a>
+<footer>
+   <div class="payment-footer">
+            <h2> PAYMENT METHOD </h2>
+            <img src="./image/icons/paypal.png" alt="PayPal">
+   </div>
+   <div class="footer-primary">
+          <div class="footer-info">
+              <h2> ABOUT US </h2>
+              <ul>
+                  <li> <a href="#"> About us</a> </li>
+                  <li> <a href="#"> Privacy Policy </a> </li>
+                  <li> <a href="#"> Terms and Agreement </a> </li>
+              </ul>
           </div>
-
-        </div>
-
-        <div class="overlay">
-          
-        </div>
-      </div>
-
-
-    </li>
-
-    <li>
-
-    </li>
-  </ul>
-</div>
--->
-
-
-
-
-
-
-
-
-
-<!--FOOTER-->
-<div class="footer">
-      <div class="aboutUs">
-        <h1>ABOUT US</h1>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <div class="payment">
-      <h1>PAYMENT</h1>
-          <img src="./image/icons/gcash.png" alt="" class="gcash">
-          <img src="./image/icons/paypal.png" alt="" class="paypal">
-      </div>
-
-      <div class="logistic">
-      <h1>LOGISTICS</h1>
-      <img src="./image/icons/JnT.png" alt="" class="JT">
-          <img src="./image/icons/ninja.png" alt="" class="ninja">
-      </div>
+          <div class="footer-info">
+            <h2> CUSTOMER SERVICE </h2>
+              <ul>
+                  <li> <a href="#"> Help Centre </a> </li>
+                  <li> <a href="#"> Return and Refund </a> </li>
+              </ul>
+          </div>
+          <div class="footer-info">
+            <h2> CONTACT US </h2>
+              <ul>
+                  <li> 
+                      <a href="#">
+                        <img src="./image/icons/gmail.png" alt=""> tpclothingline@gmail.com 
+                      </a> 
+                  </li>
+                  <li> 
+                      <a href="#">
+                        <img src="./image/icons/phone-call (1).png" alt=""> 0912-345-6789 
+                      </a>   
+                  </li>
+                
+              </ul>
+          </div>
+   </div>
+</footer>
 
 
-      <div class="customer">
-        <h1>CUSTOMER SERVICE</h1>
-        <ul>
-          <li><a href="#">Help Centre</a></li>
-          <li><a href="#">Order Tracking</a></li>
-          <li><a href="#">Free Shipping</a></li>
-          <li><a href="#">Return & Refund</a></li>
-        </ul>
-      </div>
-
-      <div class="contact">
-        <h1>CONTACT US</h1>
-        <ul>
-          <li><img src="./image/icons/gmail.png" alt="" class="gmail"></li>
-          <p class="mail"><a href="#">tpclothingline@gmail.com</a></p>
-        </ul>
-      </div>
-
-      <div class="number">
-          <img src="./image/icons/phone-call (1).png" alt="" class="phone">
-          <p><a href="#">0912-345-6789</a></p>
-        </div>
-</div>
 
 
     <!--SCRIPT-->

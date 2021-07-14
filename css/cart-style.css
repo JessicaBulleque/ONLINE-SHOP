@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+body{
+    padding-top: 10vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding: 0 10%;
+    background: whitesmoke;
+
+    position: fixed;
+    top: 0%;
+    z-index: 999;
+}
+
+header .logo h1{
+    font-weight: normal;
+    font-size: 24px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav a{
+    text-decoration: none;
+    color: black;
+}
+
+
+header nav img{
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+
+
+.container{
+    width: 100%;
+    height: max-content;
+    padding: 1% 10%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.container section{
+    width: 100%;
+    margin: 10px 0;
+}
+.container .delivery-address{ 
+    padding: 3%;
+    background: #EBF0F1;
+}
+.container .delivery-address h2{
+    padding: 0 5%;
+    text-align: center;
+} 
+
+.container .delivery-address .user-info-address{
+    position: relative;
+    padding: 0 5%;
+    line-height: 32px;
+} 
+.container .delivery-address .user-info-address table{
+    width: max-content;
+}
+.container .delivery-address .user-info-address table tr td{
+    padding: 2px 5px;
+}
+
+.container .delivery-address .user-info-address .button{
+    position: absolute;
+    right: 1%;
+    bottom: 0;
+}
+
+
+
+.container .my-cart-container{
+    padding: 2% 0;
+    height: max-content;
+    border-top: 2px dotted black;
+}
+
+.container .my-cart-container h1{
+    font-size: 32px;
+    padding: 0 20px;
+}
+.container .my-cart-container .label-container{
+    background: #E5E1E1;
+    padding: 5px 5%;
+    margin: 10px 0;
+}
+.container .my-cart-container .label-container ul{
+    display: flex;
+    align-items: center;
+}
+.container .my-cart-container .label-container ul li{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+
+.container .cart-container{
+    position: relative;
+    background: #E5E1E1;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 2%;
+    padding-bottom: 4%;
+}
+.container .cart-container .select-all{
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+.container .cart-container .cart-box-container{
+   width: 100%;
+}
+.container .cart-container .cart-box-container .cart-box{
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    padding: 0 10px;
+    padding-right: 30px;
+    margin: 10px 0;
+}
+.container .cart-container .cart-box-container .cart-box .check-box{
+    width: 10%;
+}
+.container .cart-container .cart-box-container .cart-box div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .cart-container .cart-box-container .cart-box .product-img img{
+    width: 200px;
+    height: 100%;
+}
+
+.container .cart-container .cart-box-container .cart-box .quantity-container input{
+    width: 40px;
+    text-align: center;
+    border: 1px solid gray;
+    font-size: 16px;
+    border-radius: 0;
+    outline: none;
+}
+.container .cart-container .cart-box-container .cart-box .quantity-container button{
+    padding: 0 5px;
+    border-radius: 0;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.order-summary-container{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: max-content;
+    background: #CECECE;
+    padding: .5% 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-summary-container .order-info tr td{
+    padding: 0px 10px;
+}
+.order-summary-container .payment table tr td{
+    padding: 0px 5px;
+}
+.order-summary-container .payment table tr td button{
+    padding: 7 px 0;
+    width: 150px;
+    font-size: 16px;
+    background: rgb(56, 56, 255);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5em;
+    font-style: italic;
+}
+.order-summary-container .payment table tr td button span{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: whitesmoke;
+}
