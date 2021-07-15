@@ -10,7 +10,7 @@
 }
 body{
     padding-top: 10vh;
-    background: whitesmoke;
+    background: white;
 }
 
 
@@ -73,10 +73,12 @@ header .primary-header .secondary-nav a.login-link{
 .container{
     width: 100%;
     height: max-content;
-    padding: 1% 10%;
+    padding: 2.5% 10%;
     padding-bottom: 5%;
     display: flex;
     flex-direction: column;
+    background: white;
+
 }
 .container section{
     width: 100%;
@@ -85,6 +87,7 @@ header .primary-header .secondary-nav a.login-link{
 .container .delivery-address{ 
     background: #ffffff;
     border: 10px solid var(--primaryColor);
+    padding-bottom: 5%;
 }
 .container .delivery-address h2{
     padding: 0 5%;
@@ -114,118 +117,74 @@ header .primary-header .secondary-nav a.login-link{
 .container .my-cart-container{
     padding: 2% 0;
     height: max-content;
-    border-top: 2px dotted black;
+    display: flex;
 }
 
 .container .my-cart-container h1{
     font-size: 32px;
     padding: 0 20px;
 }
-.container .my-cart-container .label-container{
-    background: #E5E1E1;
-    padding: 5px 5%;
-    margin: 10px 0;
-}
-.container .my-cart-container .label-container ul{
-    display: flex;
-    align-items: center;
-}
-.container .my-cart-container .label-container ul li{
-    list-style: none;
+.container .my-cart-container table {
     width: 100%;
+    background: whitesmoke;
+   
+}
+.container .my-cart-container table tr{
+   
+    width: 100%;
+}
+.container .my-cart-container table tr td{
     text-align: center;
+    padding: 5px 10px;
+    width: max-content;   
 }
-
-
-.container .cart-container{
-    position: relative;
-    background: #E5E1E1;
-    display: flex;
-    flex-direction: column;
-    padding: 1% 2%;
-    padding-bottom: 4%;
-}
-.container .cart-container .select-all{
-    margin-bottom: 10px;
-    padding: 0 10px;
-}
-.container .cart-container .cart-box-container{
-   width: 100%;
-}
-.container .cart-container .cart-box-container .cart-box{
-    background-color: #F5F5F5;
-    display: flex;
-    align-items: center;
-    height: 150px;
-    padding: 0 10px;
-    padding-right: 30px;
-    margin: 10px 0;
-}
-.container .cart-container .cart-box-container .cart-box .check-box{
-    width: 10%;
-}
-.container .cart-container .cart-box-container .cart-box div{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container .cart-container .cart-box-container .cart-box .product-img img{
-    width: 200px;
-    height: 100%;
-}
-
-.container .cart-container .cart-box-container .cart-box .quantity-container input{
-    width: 40px;
-    text-align: center;
-    border: 1px solid gray;
-    font-size: 16px;
-    border-radius: 0;
-    outline: none;
-}
-.container .cart-container .cart-box-container .cart-box .quantity-container button{
-    padding: 0 5px;
-    border-radius: 0;
-    border: 1px solid gray;
-    font-size: 16px;
-}
-
-.order-summary-container{
-    position: fixed;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    height: max-content;
-    background: #CECECE;
-    padding: .5% 10%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.order-summary-container .order-info tr td{
-    padding: 0px 10px;
-}
-.order-summary-container .payment table tr td{
-    padding: 0px 5px;
-}
-.order-summary-container .payment table tr td button{
-    padding: 7 px 0;
-    width: 150px;
-    font-size: 16px;
-    background: rgb(56, 56, 255);
-    color: white;
-    font-weight: bold;
+    
+.container .my-cart-container table tr td .del-btn{
+    background: none;
     border: none;
-    border-radius: 5em;
-    font-style: italic;
-}
-.order-summary-container .payment table tr td button span{
-    font-style: normal;
-    font-weight: normal;
+    color: red;
+    cursor: pointer;
     font-size: 14px;
-    color: whitesmoke;
+}
+.container .my-cart-container table tr td .del-btn:hover{
+    text-decoration: underline;
+}
+.container .my-cart-container table .header td{
+    background: var(--primaryColor);
+    color: rgba(255, 255, 255, 0.568);
+
+}
+.container .my-cart-container table tr td img{
+    width: 110px;
+    height: 100px;
+}
+.container .my-cart-container .order-summary{
+    background: whitesmoke;
+    width: 35%;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.container .my-cart-container .order-summary tr td, th{
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    
+}
+
+.container .my-cart-container .order-summary tr td{
+    text-align: left;
+}
+.container .my-cart-container .order-summary tr td:last-child{
+    width: 40%;
+    text-align: right;
+}
+
+.container .my-cart-container .order-summary tr .price input{
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
 }

@@ -25,7 +25,6 @@ body{
 
 /*BANNER*/
 .banner{
-  width: 100%;
   height: 60vh;
   background-color: var(--bannerBG);
 }
@@ -33,7 +32,7 @@ body{
 .banner .hero{
   position: absolute;
   top: 10%;
-  left: 43%;
+  right: 0%;
 }
 
 .banner .hero img{
@@ -46,8 +45,10 @@ body{
   position: absolute;
   top: 30%;
   left: 10%;
+  
+}.banner .tp-image img{
+  width: 80%;
 }
-
 
 
 
@@ -76,26 +77,29 @@ body{
 .blog-container{
   position: relative;
   height: max-content;
-  width: 100%;
-  padding: 0 10%;
   margin-top: 5%;
 }
 
 
 .blog-container .container{
-  width: 100%;
   height: 100%;
+  padding: 2% 10%
+}
+
+.blog-container .container ul{
 }
 
 .blog-container .container ul li{
   display: inline-block;
   list-style: none;
-  margin:  10px;
+  margin: 10px 0;
+  margin-right: 5px;
+
 }
 
 .blog-container .container .vlog-container{
   height: 250px;
-  width: 100%;
+  width: 250px;
   background-color: #EEE7E7;
   border-radius: 5px;
 }
@@ -109,6 +113,7 @@ body{
 
 .blog-container .container .vlog-container .vlog-title{
   text-align: center;
+  padding: 10px 20px;
 }
 
 .blog-container .container .vlog-container .vlog-title a{

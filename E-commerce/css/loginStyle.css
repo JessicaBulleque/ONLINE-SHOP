@@ -161,29 +161,22 @@ body{
 /*REGISTER STARTS HERE*/
 .signup-box{
   position: relative;
-  height: 610px;
+  height: max-content;
   width: 450px;
   background-color: var(--loginContainer);
   margin-top: 7%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
+  padding: 0 2.5%;
 }
-
+.signup-box form{
+  margin-top: -15px;
+}
 .signup-box h1{
   text-align: center;
   padding-top: 10px;
   margin-bottom: 15px;
-}
-
-.signup-box form{
-  position: absolute;
-  left: 10%;
-  width: 80%;
-}
-
-.signup-box form label{
-  font-size: 20px;
 }
 
 .signup-box a {
@@ -196,23 +189,22 @@ body{
 }
 
 .signup-box form input{
-  height: 40px;
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
   outline: none;
-  padding-left:  7px;
+  padding: 5px 10px;
   font-size: 16px;
   border: 1px solid var(--inputBorder);
 }
 
 .signup-box form input[type='submit']{
-  font-size: 22px;
+  font-size: 18px;
   cursor: pointer;
   background-color: var(--submitButton);
   color: white;
   border: none;
-  margin-top: 12px;
+  margin-top: 5px;
 }
 
 .signup-box form input[type='submit']:hover{
@@ -221,8 +213,9 @@ body{
 }
 
 .signup-box .TandC{
-  font-size: 14px;
-  margin: 106% 10%;
+  font-size: 14px; 
+  width: 100%;
+  text-align: center;
 }
 
 

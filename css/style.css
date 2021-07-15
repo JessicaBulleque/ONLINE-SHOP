@@ -60,10 +60,44 @@ header .primary-header .search-bar .search-icon{
 }
 
 header .primary-header .secondary-nav{
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: max-content;
+}
+header .primary-header .user-nav{
+  align-items: center;
+  
+}
+
+header .primary-header .user-nav a{
+  width: max-content;
+  height: max-content;
+  position: relative;
+}
+header .primary-header .user-nav .cart-icon img{
+  width: 35px;
+  height: 35px;
+}
+header .primary-header .user-nav .cart-icon .count-cart{
+  position: absolute;
+  right: 0%;
+  top: -10%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+header .primary-header .user-nav a img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px; 
+}
+header .primary-header .user-nav .user-profile img{
+  border-radius: 50%;
 }
 
 header .primary-header .secondary-nav a{

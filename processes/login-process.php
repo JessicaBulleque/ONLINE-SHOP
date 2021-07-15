@@ -6,18 +6,21 @@
         $email = $_POST['email'];
         $pass = $_POST['pass'];
 
+        
+
         $select = oci_parse($connection, "SELECT * FROM customeracc");
         oci_execute($select);
 
         while($userRow = oci_fetch_assoc($select)){
+            echo $userRow['EMAIL']." ";
+            echo $userRow['PASS']."<br>";
             if($email == $userRow['EMAIL'] && $pass == $userRow['PASS']){
-                header("location:../index.php?");
                 $_SESSION['userID'] = $userRow['USERID'];
-
-            }
+                header("location:../index.php");
+            }/*
             else{
-                echo "Login Failed";
-            }
+                header("location: ../E-commerce/login.php?Failed");
+            }*/
         }
     }
 
@@ -25,9 +28,10 @@
     if(isset($_POST['register-btn'])){
         $firstname = $_POST['fname'];
         $lastname = $_POST['lname'];
-        $address = $_POST['address'];
+        $address = "";
         $emailadd = $_POST['useremail'];
         $password = $_POST['pword'];
+        $rePass = $_POST['r-pword'];
 
         $sel = oci_parse($connection, "SELECT COUNT(*) AS TOTAL FROM customeracc");
         oci_execute($sel);
@@ -45,10 +49,13 @@
         $ins = oci_parse($connection, "INSERT INTO customeracc (USERID, FIRSTNAME, LASTNAME, PROFILEPIC, ADDRESS, EMAIL, PASS) VALUES ($custID, '$firstname','$lastname','default-profile.jpg','$address', '$emailadd', '$password')
         ");
 
-        oci_execute($ins);
+        if($password === $rePass){
+            oci_execute($ins);
 
-        $_SESSION['userID'] = $custID;
-        header("location:../index.php");
+            $_SESSION['userID'] = $custID;
+            header("location:../index.php");
+        }
+        
        
         
         
@@ -59,5 +66,5 @@
         session_destroy();
         header("location:../index.php");
       }
-        
+
 ?>

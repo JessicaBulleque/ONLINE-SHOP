@@ -5,9 +5,8 @@
 
     $userID = $_SESSION['userID'];
 
- 
     // THIS IS A VARIABLE HANDLE FOR QUERY
-    $qry = "select * from products order by PRODUCTID DESC FETCH FIRST 10 ROWS ONLY";
+    $qry = "select * from products order by PRODUCTID DESC FETCH FIRST 8 ROWS ONLY";
 
     // OCI_PARSE FOR CONNECTION DB AND QUERY 
     $result = oci_parse($connection, $qry);
@@ -15,11 +14,18 @@
     oci_execute($result); 
 
 
+    // SELECT CUSTOMER
     $selectUser = oci_parse($connection, "SELECT * FROM CUSTOMERACC WHERE USERID = $userID");
     oci_execute($selectUser);
 
     $userSelectedRow = oci_fetch_assoc($selectUser);
 
+
+    // CART COUNT
+    $countItem = oci_parse($connection, "SELECT COUNT(*) AS TOTAL FROM CART_TBL WHERE CUSTOMERID = $userID");
+    oci_execute($countItem);
+
+    $itemCount = oci_fetch_assoc($countItem);
 
 
 ?>
@@ -34,29 +40,28 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./image/icons/favicon.png" type="image/x-icon" />
-    
   
     <title> TEAM PAYAMAN | CLOTHING LINES </title>
 </head>
 
-
+<!-- USER LOGIN CONDITION -->
     <?php if(!empty($userID)) {?>
       <style>
-        #login-icon-click{
-          display: none;
-        }
-        #user-profile{
-          display: flex;
-        }
+          .user-nav{
+            display: flex;
+          }
+          .secondary-nav{
+            display: none;
+          }
       </style>
     <?php } else{ ?>
       <style>
-        #login-icon-click{
-          display: flex;
-        }
-        #user-profile{
-          display: none;
-        }
+          .user-nav{
+            display: none;
+          }
+          .secondary-nav{
+            display: flex;
+          }
       </style>
     <?php } ?>
 
@@ -75,15 +80,24 @@
          </div>
 
          <nav class="secondary-nav">
-              <a href="#" class="register-link">Register</a>
-              <a href="#" class="login-link">Login</a>
+              <a href="./E-commerce/register.php" class="register-link">Register</a>
+              <a href="./E-commerce/login.php" class="login-link">Login</a>
+         </nav>
+         <nav class="user-nav">
+              <a href="./php/cart.php" class="cart-icon">
+                  <div class="count-cart">
+                      <?=$itemCount['TOTAL']?>
+                  </div>
+                 <img src="./image/icons/shopping-cart.png" alt="">
+              </a>
+              <a href="#" class="user-profile"> <img src="./image/user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
          </nav>
     </div>
     <div class="sub-header">
         <ul>
-            <li><a href="#" class="page"> Home </a> </li>
-            <li><a href="#"> Products</a>  </li>
-            <li><a href="#"> Blogs </a>  </li>
+            <li><a href="index.php" class="page"> Home </a> </li>
+            <li><a href="./php/all-product.php"> Products</a>  </li>
+            <li><a href="./E-commerce/blogs.php"> Blogs </a>  </li>
 
         </ul>
     </div>
@@ -233,11 +247,6 @@
                   <div class="container product-info-holder">
                       <h3> &#8369; <?=$rows['PRODUCTPRICE']?>.00 </h3>
                       <p> <?=$rows['PRODUCTNAME']?> </p>
-                  </div>
-
-                  <input type="checkbox" name="wish" id="icon-wish">
-                  <div class="icon-cart-holder">
-                    <img src="./image/icons/shopping-cart.png" alt="" id="icon-cart">
                   </div>
               </div> 
             </li>

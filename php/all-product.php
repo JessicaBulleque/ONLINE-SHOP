@@ -8,6 +8,20 @@
     $select = oci_parse($connection, "SELECT * FROM PRODUCTS");
     oci_execute($select);
 
+    
+    // SELECT CUSTOMER
+    $selectUser = oci_parse($connection, "SELECT * FROM CUSTOMERACC WHERE USERID = $userID");
+    oci_execute($selectUser);
+
+    $userSelectedRow = oci_fetch_assoc($selectUser);
+
+    
+    // CART COUNT
+    $countItem = oci_parse($connection, "SELECT COUNT(*) AS TOTAL FROM CART_TBL WHERE CUSTOMERID = $userID");
+    oci_execute($countItem);
+
+    $itemCount = oci_fetch_assoc($countItem);
+
 ?>
 
 
@@ -23,32 +37,61 @@
     <link rel="shortcut icon" href="../image/icons/favicon.png" type="image/x-icon" />
     <!-- AJAX LINK -->
     
-  
     <title> TEAM PAYAMAN | CLOTHING LINES </title>
 </head>
+
+<!-- USER LOGIN CONDITION -->
+    <?php if(!empty($userID)) {?>
+      <style>
+          .user-nav{
+            display: flex;
+          }
+          .secondary-nav{
+            display: none;
+          }
+      </style>
+    <?php } else{ ?>
+      <style>
+          .user-nav{
+            display: none;
+          }
+          .secondary-nav{
+            display: flex;
+          }
+      </style>
+    <?php } ?>
 
 <body>
 
 <!-- HEADER -->
 <header>
     <div class="primary-header">
-        <a href="index.php"><img class="logo" src="../image/logo/Logo.svg" alt="Team Payaman Logo"> </a>
+        <a href="../index.php"><img class="logo" src="../image/logo/Logo.svg" alt="Team Payaman Logo"> </a>
 
          <div class="search-bar">
-              <input type="search" id="search" name="search">
+              <input type="search" id="search" name="search" placeholder="Search products here">
               <button class="search-icon"> Search </button>
          </div>
 
          <nav class="secondary-nav">
-              <a href="#" class="register-link">Register</a>
-              <a href="#" class="login-link">Login</a>
+              <a href="../E-commerce/register.php" class="register-link">Register</a>
+              <a href="../E-commerce/login.php" class="login-link">Login</a>
+         </nav>
+         <nav class="user-nav">
+              <a href="../php/cart.php" class="cart-icon">
+                  <div class="count-cart">
+                      <?=$itemCount['TOTAL']?>
+                  </div>
+                 <img src="../image/icons/shopping-cart.png" alt="">
+              </a>
+              <a href="#" class="user-profile"> <img src="../image/user-profile/<?=$userSelectedRow['PROFILEPIC']?>" alt=""></a>
          </nav>
     </div>
     <div class="sub-header">
         <ul>
-            <li><a href="#" > Home </a> </li>
-            <li><a href="#" class="page"> Products</a>  </li>
-            <li><a href="#"> Blogs </a>  </li>
+            <li><a href="../index.php"> Home </a> </li>
+            <li><a href="./php/all-product.php"  class="page"> Products</a>  </li>
+            <li><a href="../E-commerce/blogs.php"> Blogs </a>  </li>
 
         </ul>
     </div>
