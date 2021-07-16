@@ -119,10 +119,6 @@
                         <p> <?=$rows['PRODUCTNAME']?> </p>
                     </div>
 
-                    <input type="checkbox" name="wish" id="icon-wish">
-                    <div class="icon-cart-holder">
-                        <img src="../image/icons/shopping-cart.png" alt="" id="icon-cart">
-                    </div>
                 </div> 
             </li>
         <?php } ?>

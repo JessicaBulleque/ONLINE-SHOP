@@ -39,13 +39,6 @@
 
         $custID = 21000 + ($cnt['TOTAL'] + 1);
 
-        echo $custID."<br>";
-        echo $firstname."<br>";
-        echo $lastname."<br>";
-        echo $address."<br>";
-        echo $emailadd."<br>";
-        echo $password."<br>";
-
         $ins = oci_parse($connection, "INSERT INTO customeracc (USERID, FIRSTNAME, LASTNAME, PROFILEPIC, ADDRESS, EMAIL, PASS) VALUES ($custID, '$firstname','$lastname','default-profile.jpg','$address', '$emailadd', '$password')
         ");
 

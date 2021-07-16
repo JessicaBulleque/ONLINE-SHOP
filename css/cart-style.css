@@ -84,40 +84,12 @@ header .primary-header .secondary-nav a.login-link{
     width: 100%;
     margin: 10px 0;
 }
-.container .delivery-address{ 
-    background: #ffffff;
-    border: 10px solid var(--primaryColor);
-    padding-bottom: 5%;
-}
-.container .delivery-address h2{
-    padding: 0 5%;
-    text-align: center;
-} 
-
-.container .delivery-address .user-info-address{
-    position: relative;
-    padding: 0 5%;
-    line-height: 32px;
-} 
-.container .delivery-address .user-info-address table{
-    width: max-content;
-}
-.container .delivery-address .user-info-address table tr td{
-    padding: 2px 5px;
-}
-
-.container .delivery-address .user-info-address .button{
-    position: absolute;
-    right: 1%;
-    bottom: 0;
-}
-
 
 
 .container .my-cart-container{
     padding: 2% 0;
     height: max-content;
-    display: flex;
+    position: relative;
 }
 
 .container .my-cart-container h1{
@@ -158,33 +130,14 @@ header .primary-header .secondary-nav a.login-link{
     width: 110px;
     height: 100px;
 }
-.container .my-cart-container .order-summary{
-    background: whitesmoke;
-    width: 35%;
-    margin-left: 10px;
-    border-radius: 5px;
-}
 
-.container .my-cart-container .order-summary tr td, th{
-    background: whitesmoke;
-    color: rgb(0, 0, 0);
-    
-}
-
-.container .my-cart-container .order-summary tr td{
-    text-align: left;
-}
-.container .my-cart-container .order-summary tr td:last-child{
-    width: 40%;
-    text-align: right;
-}
-
-.container .my-cart-container .order-summary tr .price input{
-    width: 100%;
-    height: 30px;
-    text-align: right;
+.container .my-cart-container .check-btn{
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    background: rgb(60, 60, 255);
+    color: white;
     border: none;
-    background: none;
+    padding: 5px 20px;
     font-size: 16px;
-    font-weight: bold;
 }

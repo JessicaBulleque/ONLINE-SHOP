@@ -47,13 +47,35 @@
       <link rel="stylesheet" href="../css/cart-style.css">
       <link rel="stylesheet" href="../css/style.css">
       <title> Cart </title>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
 
-      <style>
-          .user-nav{
-            display: flex;
-          }
-      </style>
+<style>
+  .user-nav{
+    display: flex;
+  }
+</style>
+
+<script>
+    $(document).ready(function(){
+        
+        $('.cart').click(function(){
+            var subtotal = document.querySelectorAll('.totalPrice');
+            var sum;
+            var count = $('input[type="checkbox"]:checked').length;
+            $('#totalItem').html(count);
+
+
+            var text = 0;
+            $('.cart:checked').each(function(){
+                text += $('.totalPrice').val();
+               
+            });
+            $('#subtotal').html(text);
+        });
+    });
+</script>
 
 
 <body>
@@ -91,38 +113,6 @@
 
 
 <div class="container">
-  <section class="delivery-address"> 
-
-      <h2> DEFAULT DELIVERY ADDRESS </h2>
-
-      <div class="user-info-address">
-        <table >
-          <tr>
-            <td> Name: </td>
-            <td> <?=$userSelectedRow['FIRSTNAME'].' '.$userSelectedRow['LASTNAME']?></td>
-          </tr>
-
-          <tr>
-            <td> Address: </td>
-            <td> <?=$userSelectedRow['ADDRESS']?> </td>
-          </tr>
-
-          <tr>
-            <td> Zip code: </td>
-            <td> <?=$userSelectedRow['ZIP']?> </td>
-          </tr>
-
-          <tr>
-            <td> Email: </td>
-            <td> <?=$userSelectedRow['EMAIL']?> </td>
-          </tr>
-        </table>
-
-        <div class="button">
-            <a href="#"> Edit Delivery Address </a>
-        </div>
-      </div>
-  </section>
 
   <h1 style="border-top: 2px dotted black; padding-top: 2%;"> MY SHOPPING BAG </h1>
   <section class="my-cart-container">
@@ -137,103 +127,34 @@
               <td> Total Price </td>
               <td> Action </td>
           </tr>
+    <form action="../php/checkout.php" method="POST">
           <?php 
              while($cartRow = oci_fetch_assoc($cartQuery)) { ?> 
           
             <tr>
-                <td> <input type="checkbox" name="" id=""> </td>
+                <td> <input type="checkbox" name="cart[]" class="cart" value="<?=$cartRow['CARTID']?>"> </td>
                 <td> <img src="../products/<?=$cartRow['PICTURE']?>"></td>
                 <td> <h3> <?=$cartRow['PRODUCTNAME']?></h3> </td>
                 <td> <p> <?=$cartRow['PRODUCTPRICE']?> </p> </td>
-                <td> <?=$cartRow['QTY']?>  </td>
-                <td> <?=$cartRow['PRODUCTPRICE'] * $cartRow['QTY']?>  </td>
+                <td > <?=$cartRow['QTY']?>  </td>
+                <td> <p class="totalPrice"> <?=$cartRow['PRODUCTPRICE'] * $cartRow['QTY']?> </p> </td>
                 <td> <button class="del-btn"> Delete </button> </td>
             </tr>
             <tr> <td colspan="7"> <hr> </td> </tr>
           <?php } ?>
       </table>
-
-      <table class="order-summary" border="0">
-        <tr>
-          <th colspan="2"> ORDER SUMMARY </th>
-        </tr>
-        <tr>
-          <td> Total Item </td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> Subtotal </td>
-          <td> 400.00 </td>
-        </tr>
-        <tr>
-          <td> Shipping Fee </td>
-          <td> 60.00 </td>
-        </tr>
-        <tr>
-          <td colspan="2"> <hr></td>
-        </tr>
-        <tr>
-          
-          <td> Total Amount </td>
-          <td class="price"> <input type="text" id="price" value="300.00"> </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-               <div id="smart-button-container">
-                <div style="text-align: center;">
-                  <div id="paypal-button-container"></div>
-                </div>
-              </div>  
-          </td>
-        </tr>
-
-      </table>
+      <input type="submit" value="CHECKOUT" name="checkout-btn" class="check-btn">
+    </form>
       
   </section>  
 </div>
 
+<script>
+
+</script>
 
 <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=PHP" data-sdk-integration-source="button-factory"></script>
 
-<script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'black',
-          layout: 'horizontal',
-          label: 'checkout',
-          
-        },
-
-        createOrder: function(data, actions) {
-      const price = document.querySelector("#price").value;
-      return actions.order.create({
-        purchase_units: [{
-                        description:'Sample',
-                        amount: {
-                            value:price
-                        },
-                        tax_total:{
-                            value:42
-                        }
-                    }]
-      });
-    },
-
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            window.location = 'http://localhost/ONLINE-SHOP/e-commerce/thankyou.php';
-          });
-        },
-
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
 
   </body>
 </html>
